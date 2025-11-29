@@ -60,22 +60,16 @@ Onde:
 
 ### Arquitetura Neural
 
-- **Transformer com Atenção Dupla**:
-  - *Self-attention*: Captura sinergias entre compostos
-  - *Cross-attention*: Personalização baseada no perfil do usuário
-- **Monte Carlo Dropout**: Quantificação de incerteza
-- **Dual Output Heads**: Eficácia + Risco
+O coração do SynPhytica é um modelo Transformer especializado que processa a "linguagem" das interações moleculares.
 
-### Otimização Híbrida
-
-- **NSGA-II**: Algoritmo genético multiobjetivo
-- **PSO**: Refinamento local de doses
-- **Pareto Front**: Soluções não-dominadas
+- **Self-Attention**: Captura sinergias não-lineares entre compostos (ex: terpenos modulando canabinoides).
+- **Cross-Attention**: Integra o perfil genético/clínico do paciente para personalizar a predição.
+- **Dual Heads**: Estima simultaneamente a probabilidade de eficácia e o risco de efeitos adversos.
 
 <div align="center">
 
-![Arquitetura SynPhytica](assets/images/architecture.png)
-*Arquitetura do Sistema SynPhytica*
+![Neural Architecture](assets/images/neural_architecture_diagram.png)
+*Diagrama esquemático do mecanismo de Atenção Dupla (Dual Attention)*
 
 </div>
 

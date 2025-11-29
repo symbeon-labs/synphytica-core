@@ -40,6 +40,12 @@ Visualização de Explainable AI (XAI)
 - Mostra: Pesos de atenção entre pares de compostos
 - Destaque: Identificação visual de sinergias (Entourage Effect)
 
+### `images/neural_architecture_diagram.png`
+Diagrama técnico de patente (Esquemático)
+- Uso: Documentação técnica, pedidos de patente
+- Mostra: Fluxo de dados nos blocos de atenção (Self + Cross)
+- Estilo: Clean, técnico, alto contraste
+
 ## 📝 Diretrizes de Uso
 
 ### Branding
