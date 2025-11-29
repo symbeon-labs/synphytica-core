@@ -1,11 +1,17 @@
 # 🧬 SynPhytica
 
+<div align="center">
+
+![SynPhytica Banner](assets/images/banner.png)
+
 **AI-Powered Framework for Personalized Phytotherapeutic Formulation Optimization**
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red.svg)](https://pytorch.org/)
 [![Status](https://img.shields.io/badge/Status-Research-yellow.svg)]()
+
+</div>
 
 ---
 
@@ -25,6 +31,13 @@ SynPhytica formaliza matematicamente o problema de **polypharmacology personaliz
 - 🎨 **Preferências do paciente** (sabor, forma, rotina)
 - ⚖️ **Restrições regulatórias** e de dose
 - 📊 **Incerteza epistemológica** das previsões
+
+<div align="center">
+
+![Conceito SynPhytica](assets/images/concept.png)
+*Fusão de Matemática, IA e Medicina Natural*
+
+</div>
 
 ---
 
@@ -58,6 +71,13 @@ Onde:
 - **NSGA-II**: Algoritmo genético multiobjetivo
 - **PSO**: Refinamento local de doses
 - **Pareto Front**: Soluções não-dominadas
+
+<div align="center">
+
+![Arquitetura SynPhytica](assets/images/architecture.png)
+*Arquitetura do Sistema SynPhytica*
+
+</div>
 
 ---
 
