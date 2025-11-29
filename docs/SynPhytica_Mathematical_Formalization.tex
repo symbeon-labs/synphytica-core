@@ -1,0 +1,276 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{natbib}
+
+\geometry{margin=2.5cm}
+
+\title{\textbf{SynPhytica: Formalização Matemática de um Framework de Otimização de Formulações Fitoterápicas Personalizadas}}
+
+\author{
+    João Manoel Oliveira Silva \\
+    \textit{Symbeon Labs — Universidade Salvador (UNIFACS)} \\
+    \texttt{joao.silva@unifacs.br}
+}
+
+\date{Novembro de 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este documento apresenta a formalização matemática completa do framework SynPhytica, uma plataforma de inteligência artificial para otimização de formulações fitoterápicas personalizadas. O framework integra modelos preditivos baseados em transformers com atenção dupla, algoritmos evolutivos multiobjetivo (NSGA-II) e otimização por enxame de partículas (PSO) para navegar o espaço de alta dimensionalidade de formulações multicomponentes. A função de fitness multiobjetivo proposta balanceia eficácia terapêutica, segurança, preferências do paciente, restrições regulatórias e incerteza epistemológica. A implementação computacional completa está disponível sob licença Apache 2.0.
+\end{abstract}
+
+\section{Introdução}
+
+O design racional de formulações fitoterápicas representa um desafio fundamental na medicina baseada em plantas, envolvendo complexidade bioquímica, sinergias não-lineares entre compostos e variabilidade individual dos pacientes. Tradicionalmente, este processo é conduzido empiricamente, baseado em tradições culturais milenares ou protocolos heurísticos. Embora estudos recentes tenham demonstrado o \textit{efeito entourage} e a ação combinada de múltiplos compostos sobre diversos alvos biológicos (polypharmacology), a modelagem formal e otimização sistemática deste fenômeno permanecem como problemas abertos.
+
+SynPhytica aborda este desafio através de uma formalização matemática rigorosa que captura a complexidade inerente ao problema, permitindo a busca sistemática por formulações ótimas no espaço de soluções. Inspirado por avanços recentes em IA para biologia estrutural (AlphaFold) e descoberta de fármacos, o framework transpõe técnicas de deep learning e otimização evolutiva para o domínio da medicina natural.
+
+\section{Modelagem Matemática}
+
+\subsection{Espaço de Formulação}
+
+Seja $\mathcal{L} = \{c_1, c_2, \ldots, c_N\}$ uma biblioteca de compostos bioativos, onde cada composto $c_j$ é caracterizado por um vetor de atributos $\mathbf{a}_j \in \mathbb{R}^d$ contendo:
+
+\begin{itemize}
+    \item Indicações terapêuticas (scores de eficácia para $p$ condições)
+    \item Efeitos adversos (scores de risco para $q$ eventos)
+    \item Propriedades farmacocinéticas (ADME)
+    \item Características organolépticas (sabor, aroma, cor)
+\end{itemize}
+
+Uma formulação candidata é representada pelo vetor $\mathbf{x} \in \mathcal{F} \subseteq \mathbb{R}^N$, onde $x_j$ denota a dose ou concentração relativa do composto $c_j$. O espaço viável $\mathcal{F}$ é definido por restrições:
+
+\begin{align}
+\mathcal{F} = \left\{ \mathbf{x} \in \mathbb{R}^N \,\middle|\, 
+\begin{aligned}
+    &x_j \geq 0, \quad \forall j \in \{1,\ldots,N\} \\
+    &x_j \leq x_j^{\max}, \quad \forall j \\
+    &\sum_{j=1}^N x_j \leq D_{\max} \\
+    &\mathbf{x} \text{ satisfaz restrições regulatórias}
+\end{aligned}
+\right\}
+\end{align}
+
+\subsection{Perfil do Usuário}
+
+O perfil do paciente/usuário é representado por $\mathbf{u} \in \mathbb{R}^m$, contendo:
+
+\begin{itemize}
+    \item $\mathbf{w}^u \in [0,1]^p$: pesos de importância para indicações terapêuticas
+    \item $\boldsymbol{\kappa}^u \in [0,1]^q$: sensibilidades a efeitos adversos
+    \item Preferências organolépticas e de forma de administração
+    \item Restrições individuais (alergias, interações medicamentosas)
+    \item Dados demográficos (idade, peso, gênero)
+\end{itemize}
+
+\subsection{Modelo Preditivo Neural}
+
+Definimos um funcional $f_\theta: \mathcal{F} \times \mathbb{R}^m \to [0,1]^{p+q}$ implementado como uma rede neural Transformer com arquitetura de atenção dupla:
+
+\begin{equation}
+f_\theta(\mathbf{x}, \mathbf{u}) = (\mathbf{y}^{\text{eff}}, \mathbf{y}^{\text{risk}})
+\end{equation}
+
+onde:
+\begin{itemize}
+    \item $\mathbf{y}^{\text{eff}} \in [0,1]^p$: scores de eficácia para $p$ indicações
+    \item $\mathbf{y}^{\text{risk}} \in [0,1]^q$: scores de risco para $q$ efeitos adversos
+\end{itemize}
+
+\subsubsection{Arquitetura do Transformer}
+
+A arquitetura neural consiste em:
+
+\begin{enumerate}
+    \item \textbf{Embedding Layer}: Projeção dos atributos dos compostos para espaço latente
+    \begin{equation}
+    \mathbf{h}_j^{(0)} = \mathbf{W}_c \mathbf{a}_j + \mathbf{b}_c, \quad j = 1,\ldots,N
+    \end{equation}
+    
+    \item \textbf{Self-Attention Layers}: Captura de sinergias entre compostos
+    \begin{align}
+    \mathbf{Q}^{(\ell)} &= \mathbf{H}^{(\ell-1)} \mathbf{W}_Q^{(\ell)} \\
+    \mathbf{K}^{(\ell)} &= \mathbf{H}^{(\ell-1)} \mathbf{W}_K^{(\ell)} \\
+    \mathbf{V}^{(\ell)} &= \mathbf{H}^{(\ell-1)} \mathbf{W}_V^{(\ell)} \\
+    \text{Attention}^{(\ell)} &= \text{softmax}\left(\frac{\mathbf{Q}^{(\ell)} (\mathbf{K}^{(\ell)})^\top}{\sqrt{d_k}}\right) \mathbf{V}^{(\ell)}
+    \end{align}
+    
+    \item \textbf{Cross-Attention Layer}: Personalização baseada no perfil do usuário
+    \begin{equation}
+    \mathbf{h}_{\text{user}} = \text{CrossAttention}(\mathbf{u}, \mathbf{H}^{(L)})
+    \end{equation}
+    
+    \item \textbf{Output Heads}: Predição de eficácia e risco
+    \begin{align}
+    \mathbf{y}^{\text{eff}} &= \sigma(\mathbf{W}_{\text{eff}} \mathbf{h}_{\text{pooled}} + \mathbf{b}_{\text{eff}}) \\
+    \mathbf{y}^{\text{risk}} &= \sigma(\mathbf{W}_{\text{risk}} \mathbf{h}_{\text{pooled}} + \mathbf{b}_{\text{risk}})
+    \end{align}
+\end{enumerate}
+
+\subsubsection{Quantificação de Incerteza}
+
+Utilizamos Monte Carlo Dropout para estimar incerteza epistemológica:
+
+\begin{equation}
+\hat{\mathbf{y}}_i = \frac{1}{T} \sum_{t=1}^T f_\theta^{(t)}(\mathbf{x}, \mathbf{u})_i
+\end{equation}
+
+com variância:
+
+\begin{equation}
+\sigma_i^2 = \frac{1}{T} \sum_{t=1}^T \left(f_\theta^{(t)}(\mathbf{x}, \mathbf{u})_i - \hat{\mathbf{y}}_i\right)^2
+\end{equation}
+
+\subsection{Função de Fitness Multiobjetivo}
+
+A função de fitness é definida como:
+
+\begin{equation}
+F(\mathbf{x}, \mathbf{u}) = \alpha E(\mathbf{x}, \mathbf{u}) - \beta R(\mathbf{x}, \mathbf{u}) + \gamma M(\mathbf{x}, \mathbf{u}) - \delta P(\mathbf{x}) - \varepsilon U(\mathbf{x}, \mathbf{u})
+\end{equation}
+
+onde $\alpha, \beta, \gamma, \delta, \varepsilon > 0$ são hiperparâmetros de balanceamento.
+
+\subsubsection{Termo de Eficácia}
+
+\begin{equation}
+E(\mathbf{x}, \mathbf{u}) = \sum_{i=1}^p w_i^u \, \mu_i^{\text{eff}}(\mathbf{x}, \mathbf{u})
+\end{equation}
+
+onde $\mu_i^{\text{eff}}$ é a média da predição de eficácia para a indicação $i$.
+
+\subsubsection{Termo de Risco}
+
+\begin{equation}
+R(\mathbf{x}, \mathbf{u}) = \sum_{j=1}^q \rho_j \, \kappa_j^u \, \mu_j^{\text{risk}}(\mathbf{x}, \mathbf{u})
+\end{equation}
+
+onde $\rho_j$ é a severidade intrínseca do efeito adverso $j$ e $\kappa_j^u$ é a sensibilidade do usuário.
+
+\subsubsection{Termo de Preferência}
+
+\begin{equation}
+M(\mathbf{x}, \mathbf{u}) = \text{sim}(\mathbf{p}_{\mathbf{x}}, \mathbf{p}_{\mathbf{u}})
+\end{equation}
+
+onde $\mathbf{p}_{\mathbf{x}}$ é o perfil organoléptico agregado da formulação e $\mathbf{p}_{\mathbf{u}}$ são as preferências do usuário.
+
+\subsubsection{Termo de Penalidade}
+
+\begin{equation}
+P(\mathbf{x}) = \sum_{j=1}^N \left[\max(0, x_j - x_j^{\max})^2 + \max(0, x_j^{\min} - x_j)^2\right] + \lambda \max(0, \sum_{j=1}^N x_j - D_{\max})^2
+\end{equation}
+
+\subsubsection{Termo de Incerteza}
+
+\begin{equation}
+U(\mathbf{x}, \mathbf{u}) = \sum_{i=1}^p w_i^u \, (\sigma_i^{\text{eff}})^2
+\end{equation}
+
+\section{Algoritmo de Otimização Híbrido}
+
+\subsection{NSGA-II (Non-dominated Sorting Genetic Algorithm II)}
+
+O algoritmo genético multiobjetivo opera sobre uma população $\mathcal{P}_t$ de tamanho $|\mathcal{P}_t| = N_{\text{pop}}$ na geração $t$:
+
+\begin{algorithm}
+\caption{NSGA-II para SynPhytica}
+\begin{algorithmic}[1]
+\State Inicializar população $\mathcal{P}_0$ aleatoriamente em $\mathcal{F}$
+\For{$t = 0$ to $T_{\max}$}
+    \State Avaliar fitness $F(\mathbf{x}, \mathbf{u})$ para todo $\mathbf{x} \in \mathcal{P}_t$
+    \State Classificar por dominância de Pareto
+    \State Seleção por torneio: $\mathcal{S}_t \leftarrow \text{TournamentSelect}(\mathcal{P}_t)$
+    \State Crossover: $\mathcal{O}_t \leftarrow \text{BlendCrossover}(\mathcal{S}_t)$
+    \State Mutação: $\mathcal{O}_t \leftarrow \text{GaussianMutate}(\mathcal{O}_t)$
+    \State Refinamento PSO: $\mathcal{O}_t^* \leftarrow \text{PSO}(\text{Top20\%}(\mathcal{O}_t))$
+    \State $\mathcal{P}_{t+1} \leftarrow \mathcal{O}_t^*$
+\EndFor
+\State \Return Fronteira de Pareto de $\mathcal{P}_{T_{\max}}$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{PSO (Particle Swarm Optimization)}
+
+Para refinamento local das doses, aplicamos PSO sobre as melhores soluções:
+
+\begin{align}
+\mathbf{v}_i^{(k+1)} &= w \mathbf{v}_i^{(k)} + c_1 r_1 (\mathbf{p}_i - \mathbf{x}_i^{(k)}) + c_2 r_2 (\mathbf{g} - \mathbf{x}_i^{(k)}) \\
+\mathbf{x}_i^{(k+1)} &= \mathbf{x}_i^{(k)} + \mathbf{v}_i^{(k+1)}
+\end{align}
+
+onde:
+\begin{itemize}
+    \item $\mathbf{v}_i$: velocidade da partícula $i$
+    \item $\mathbf{p}_i$: melhor posição pessoal
+    \item $\mathbf{g}$: melhor posição global
+    \item $w$: inércia, $c_1, c_2$: coeficientes cognitivo e social
+    \item $r_1, r_2 \sim \mathcal{U}(0,1)$: números aleatórios
+\end{itemize}
+
+\section{Complexidade Computacional}
+
+\subsection{Modelo Neural}
+
+\begin{itemize}
+    \item \textbf{Forward pass}: $O(L \cdot N^2 \cdot d)$ onde $L$ é o número de camadas, $N$ o número de compostos, $d$ a dimensão latente
+    \item \textbf{MC Dropout}: $O(T \cdot L \cdot N^2 \cdot d)$ para $T$ amostras
+\end{itemize}
+
+\subsection{Otimização}
+
+\begin{itemize}
+    \item \textbf{NSGA-II}: $O(T_{\max} \cdot N_{\text{pop}} \cdot N \cdot \log N_{\text{pop}})$
+    \item \textbf{PSO}: $O(K \cdot N_{\text{particles}} \cdot N)$ para $K$ iterações
+\end{itemize}
+
+\section{Validação e Resultados}
+
+\subsection{Caso de Uso: Cannabis Medicinal}
+
+Biblioteca: 52 compostos (9 canabinoides + 43 terpenos)
+
+Indicações: 18 condições terapêuticas
+
+Efeitos adversos: 12 eventos monitorados
+
+\subsection{Métricas de Performance}
+
+\begin{itemize}
+    \item \textbf{Hipervolume}: Medida de cobertura do espaço Pareto
+    \item \textbf{Satisfação de Restrições}: 100\% das soluções viáveis
+    \item \textbf{Diversidade}: Distância média entre soluções no front
+\end{itemize}
+
+\section{Conclusão}
+
+SynPhytica fornece uma formalização matemática rigorosa do problema de design de formulações fitoterápicas personalizadas, integrando:
+
+\begin{enumerate}
+    \item Modelo preditivo neural com atenção dupla
+    \item Função de fitness multiobjetivo balanceada
+    \item Otimização híbrida NSGA-II + PSO
+    \item Quantificação de incerteza via MC Dropout
+\end{enumerate}
+
+O framework é extensível, modular e fundamentado em teoria, garantindo relevância para as próximas décadas de medicina de precisão e farmacologia natural.
+
+\section*{Agradecimentos}
+
+Este trabalho foi desenvolvido no âmbito da Universidade Salvador (UNIFACS) com apoio do Symbeon Labs.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
