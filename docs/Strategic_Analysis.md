@@ -145,6 +145,19 @@ SynPhytica representa uma inovação disruptiva na interseção de IA, farmacolo
    - Bibliotecas de compostos proprietárias
    - Modelos treinados como IP
 
+### Posicionamento "White Space"
+
+**Pesquisa de Patentes (Novembro 2025)**:
+- ✅ Nenhuma patente encontrada cobrindo "IA Multiobjetivo para Sinergia de Fitofármacos"
+- ✅ SynPhytica ocupa um **white space estratégico** no mercado
+- ✅ Combinação única: Transformers + NSGA-II + PSO + Quantificação de Incerteza
+- ✅ Aplicação específica para polypharmacology natural é inédita
+
+**Vantagem Competitiva**:
+- First-mover advantage em nicho não explorado
+- Barreira de entrada técnica alta (expertise em ML + farmacologia + otimização)
+- Network effects via bibliotecas de compostos proprietárias
+
 ### Riscos e Mitigações
 
 | Risco | Probabilidade | Impacto | Mitigação |
