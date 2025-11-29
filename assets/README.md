@@ -46,6 +46,12 @@ Diagrama técnico de patente (Esquemático)
 - Mostra: Fluxo de dados nos blocos de atenção (Self + Cross)
 - Estilo: Clean, técnico, alto contraste
 
+### `images/optimization_process.gif`
+Animação do processo evolutivo
+- Uso: README principal (Demonstração dinâmica)
+- Mostra: Convergência da população para a Fronteira de Pareto
+- Destaque: Visualização temporal da otimização
+
 ## 📝 Diretrizes de Uso
 
 ### Branding

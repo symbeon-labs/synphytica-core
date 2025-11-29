@@ -39,6 +39,17 @@ SynPhytica formaliza matematicamente o problema de **polypharmacology personaliz
 
 </div>
 
+### ⚡ Veja o SynPhytica em Ação
+
+O GIF abaixo demonstra o processo de evolução das formulações. Partindo de combinações aleatórias (pontos dispersos), o algoritmo converge rapidamente para a **Fronteira de Pareto** (pontos dourados), maximizando a eficácia enquanto minimiza os riscos.
+
+<div align="center">
+
+![Optimization Process](assets/images/optimization_process.gif)
+*Evolução dinâmica da população de formulações ao longo de 60 gerações*
+
+</div>
+
 ---
 
 ## 🔬 Fundamentos Científicos
