@@ -28,6 +28,12 @@ Visualização conceitual do framework
 - Representa: Fusão de Matemática + IA + Medicina Natural
 - Estilo: Artístico/científico com elementos holográficos
 
+### `images/pareto_front.png`
+Gráfico de validação científica (Pareto Frontier)
+- Uso: Seção de validação do README, papers
+- Mostra: Trade-off Eficácia vs. Risco
+- Destaque: Superioridade do algoritmo SynPhytica sobre busca aleatória
+
 ## 📝 Diretrizes de Uso
 
 ### Branding
