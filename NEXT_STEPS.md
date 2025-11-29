@@ -307,7 +307,7 @@ python synphytica_core.py > results.txt
 
 **Recursos**:
 - GitHub Issues: Para bugs e features
-- Email: joao.silva@unifacs.br
+- Email: contact@symbeonlabs.com
 - Documentação: README.md e docs/
 
 **Comunidades**:

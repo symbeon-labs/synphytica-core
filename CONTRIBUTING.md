@@ -96,7 +96,7 @@ Atualize a documentação relevante:
 
 Para questões sobre contribuições:
 - Abra uma issue
-- Email: joao.silva@unifacs.br
+- Email: contact@symbeonlabs.com
 
 ## 📜 Código de Conduta
 
@@ -120,7 +120,7 @@ Exemplos de comportamento inaceitável:
 
 ### Aplicação
 
-Instâncias de comportamento inaceitável podem ser reportadas para joao.silva@unifacs.br.
+Instâncias de comportamento inaceitável podem ser reportadas para contact@symbeonlabs.com.
 
 ## 🙏 Agradecimentos
 

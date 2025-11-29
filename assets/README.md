@@ -57,7 +57,7 @@ Roxo:           #6C63FF
 
 ## 📄 Licença
 
-Todos os assets visuais são © 2025 João Manoel Oliveira Silva - Symbeon Labs.
+Todos os assets visuais são © 2025 Symbeon Labs.
 
 Uso permitido para:
 - Documentação do projeto

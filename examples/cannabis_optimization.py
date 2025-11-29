@@ -5,7 +5,7 @@ SynPhytica Example: Cannabis Medicinal Optimization
 This example demonstrates how to use SynPhytica to optimize a cannabis
 formulation for a patient with chronic pain and anxiety.
 
-Author: João Manoel Oliveira Silva
+Author: Symbeon Labs
 """
 
 from synphytica_core import (

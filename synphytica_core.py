@@ -2,12 +2,13 @@
 SynPhytica Core Framework
 =========================
 
-AI-Powered Framework for Personalized Phytotherapeutic Formulation Optimization
+Core implementation of the SynPhytica framework for multi-objective optimization
+of phytotherapeutic formulations using Transformers and Evolutionary Algorithms.
 
-Author: João Manoel Oliveira Silva
-Institution: Symbeon Labs — Universidade Salvador (UNIFACS)
+Author: Symbeon Labs
+Institution: Symbeon Labs
 License: Apache 2.0
-Copyright: © 2025 João Manoel Oliveira Silva
+Copyright: © 2025 Symbeon Labs
 
 Mathematical Foundation:
 -----------------------

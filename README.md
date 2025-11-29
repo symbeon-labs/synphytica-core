@@ -17,7 +17,7 @@
 
 ## 📋 Visão Geral
 
-**SynPhytica** é um framework computacional inovador que aplica inteligência artificial, otimização multiobjetivo e farmacologia de rede para o design racional de formulações fitoterápicas personalizadas. Inspirado por avanços como AlphaFold na biologia estrutural, SynPhytica transpõe técnicas de deep learning e algoritmos evolutivos para o universo da medicina natural.
+**SynPhytica** é um framework computacional inovador que aplica inteligência artificial, otimização multiobjetivo e farmacologia de rede para o design racional de formulações fitoterápicas personalizadas. Inspirado por avanços recentes em biologia computacional, SynPhytica transpõe técnicas de deep learning e algoritmos evolutivos para o universo da medicina natural.
 
 ### 🎯 Problema Resolvido
 
@@ -215,73 +215,6 @@ SynPhytica/
 
 - 📄 **Formalização Matemática**: `docs/SynPhytica_paper_PT.pdf`
 - 📄 **Technical Specification**: `docs/SynPhytica_paper_EN.pdf`
-- 🔗 **arXiv** (em preparação)
-
----
-
-## 🛡️ Proteção Intelectual
-
-- **Autor**: João Manoel Oliveira Silva
-- **Instituição**: Symbeon Labs — Universidade Salvador (UNIFACS)
-- **Licença**: Apache 2.0
-- **Copyright**: © 2025 João Manoel Oliveira Silva
-
-### Prior Art
-
-- Commits timestamped no GitHub
-- Submissão planejada ao arXiv
-- Documentação completa de autoria
-
----
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Por favor, leia [CONTRIBUTING.md](CONTRIBUTING.md) para detalhes sobre nosso código de conduta e processo de submissão de pull requests.
-
----
-
-## 📧 Contato
-
-**João Manoel Oliveira Silva**  
-📧 Email: joao.silva@unifacs.br  
-🏢 Symbeon Labs  
-🎓 Universidade Salvador (UNIFACS)
-
----
-
-## 📜 Citação
-
-Se você usar SynPhytica em sua pesquisa, por favor cite:
-
-```bibtex
-@software{silva2025synphytica,
-  author = {Silva, João Manoel Oliveira},
-  title = {SynPhytica: AI-Powered Framework for Personalized Phytotherapeutic Formulation Optimization},
-  year = {2025},
-  publisher = {GitHub},
-  url = {https://github.com/seu-usuario/SynPhytica}
-}
-```
-
----
-
-## 📝 Licença
-
-Este projeto está licenciado sob a Apache License 2.0 - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
----
-
-## 🌟 Agradecimentos
-
-- Inspirado por AlphaFold (DeepMind) e avanços em AI para drug discovery
-- Fundamentado em princípios de network pharmacology e polypharmacology
-- Desenvolvido com apoio da Universidade Salvador (UNIFACS)
-
----
-
-<div align="center">
-
-**SynPhytica** — *A matemática da polifarmacologia personalizada*
 
 [![GitHub](https://img.shields.io/badge/GitHub-SynPhytica-black?logo=github)](https://github.com/seu-usuario/SynPhytica)
 

@@ -1,7 +1,7 @@
 # 🎯 SynPhytica: Fundamentação Científica Completa
 
 **Documento de Consolidação Científica e Comercial**  
-**Autor**: João Manoel Oliveira Silva  
+**Autor**: Symbeon Labs  
 **Data**: 29 de Novembro de 2025
 
 ---
@@ -216,10 +216,9 @@ Scientific Reports, 14(1), 5678
 
 **Exemplos de Sucesso**:
 
-1. **AlphaFold (DeepMind)**
-   - Jumper et al. (2021), Nature, 596(7873), 583-589
-   - Revolucionou predição de estrutura de proteínas
-   - Impacto: 1000+ citações em 2 anos
+1. **Deep Learning em Biologia Estrutural**
+   - Revolução na predição de estrutura de proteínas
+   - Impacto massivo em drug discovery
 
 2. **Atomwise**
    - Funding: $123M
@@ -297,11 +296,11 @@ Scientific Reports, 14(1), 5678
 
 ### Para Investidores:
 
-**"SynPhytica é o AlphaFold da fitoterapia."**
+**"SynPhytica é a evolução natural da fitoterapia."**
 
-- AlphaFold resolveu dobramento de proteínas
-- SynPhytica resolve sinergia de compostos naturais
-- Mercado: $550B+ vs. $188B (AI saúde)
+- Traz a precisão da IA para a complexidade das plantas
+- Resolve o problema da variabilidade e personalização
+- Mercado: $550B+ (Fitoterapia Global)
 
 ### Para Cientistas:
 
