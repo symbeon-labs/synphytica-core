@@ -14,7 +14,8 @@ Logo oficial do SynPhytica
 Banner do projeto para GitHub
 - Uso: Topo do README.md
 - Dimensões: 1200x400px
-- Estilo: Gradiente moderno com elementos científicos
+- Estilo: Deep Tech, fusão de moléculas orgânicas e redes neurais (Teal/Gold)
+- Texto: "SynPhytica - Generative Polypharmacology Engine"
 
 ### `images/architecture.png`
 Diagrama de arquitetura do sistema
