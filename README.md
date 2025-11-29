@@ -216,6 +216,17 @@ O gráfico abaixo demonstra a superioridade do algoritmo híbrido do SynPhytica 
 
 </div>
 
+### Explainable AI: Decodificando o "Entourage Effect"
+
+Diferente de modelos "caixa-preta", o mecanismo de atenção do SynPhytica permite visualizar exatamente quais interações moleculares o modelo está priorizando. O mapa de calor abaixo mostra a **Matriz de Self-Attention**, onde pontos quentes indicam forte sinergia detectada (ex: THC modulado por Limoneno).
+
+<div align="center">
+
+![Synergy Heatmap](assets/images/synergy_heatmap.png)
+*Matriz de Atenção Neural revelando clusters de sinergia molecular*
+
+</div>
+
 ### Métricas de Performance
 
 - **Hipervolume**: Cobertura do espaço Pareto superior em 25%

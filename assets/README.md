@@ -34,6 +34,12 @@ Gráfico de validação científica (Pareto Frontier)
 - Mostra: Trade-off Eficácia vs. Risco
 - Destaque: Superioridade do algoritmo SynPhytica sobre busca aleatória
 
+### `images/synergy_heatmap.png`
+Visualização de Explainable AI (XAI)
+- Uso: Demonstração de interpretabilidade do modelo
+- Mostra: Pesos de atenção entre pares de compostos
+- Destaque: Identificação visual de sinergias (Entourage Effect)
+
 ## 📝 Diretrizes de Uso
 
 ### Branding
