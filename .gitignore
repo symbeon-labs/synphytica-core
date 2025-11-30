@@ -95,3 +95,4 @@ data/proprietary/
 *.proprietary.json
 *_private.*
 research_notes/
+docs/DATA_MONETIZATION_STRATEGY.md
