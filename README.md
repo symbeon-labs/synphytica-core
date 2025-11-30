@@ -14,7 +14,7 @@
 
 ---
 
-> 📖 **New to SynPhytica?** See the complete system walkthrough in [`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md) for detailed architecture, validation results, and usage examples.
+> 📖 **New to SynPhytica?** See the complete system walkthrough in [`docs/guides/WALKTHROUGH.md`](docs/guides/WALKTHROUGH.md) for detailed architecture, validation results, and usage examples.
 
 ---
 

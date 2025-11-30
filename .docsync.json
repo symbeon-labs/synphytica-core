@@ -1,0 +1,47 @@
+{
+  "projectName": "SynPhytica",
+  "version": "1.0.0",
+  "description": "AI-Powered Framework for Personalized Phytotherapeutic Formulation Optimization",
+  "organization": {
+    "docs": {
+      "path": "docs/",
+      "categories": {
+        "api": ["API_*.md"],
+        "guides": ["WALKTHROUGH.md", "*_Guide.md"],
+        "scientific": ["*_Foundation*.md", "*.tex"],
+        "internal": ["*_STRATEGY.md", "NEXT_STEPS.md"]
+      },
+      "autoGenerate": ["README.md", "CHANGELOG.md"]
+    },
+    "templates": {
+      "path": "templates/",
+      "types": [
+        "compound_contribution",
+        "plant_species_profile",
+        "experimental_protocol",
+        "research_collaboration"
+      ]
+    }
+  },
+  "docSync": {
+    "enabled": true,
+    "autoOrganize": true,
+    "detectDuplicates": true,
+    "generateIndex": true,
+    "mdToTex": {
+      "enabled": true,
+      "templates": "docs/latex_templates/"
+    }
+  },
+  "metadata": {
+    "author": "Symbeon Labs",
+    "license": "Apache 2.0",
+    "contact": "contact@symbeonlabs.com"
+  },
+  "excludePaths": [
+    "test_env/",
+    "data/raw/",
+    "models/*.pth",
+    "**/__pycache__"
+  ]
+}
