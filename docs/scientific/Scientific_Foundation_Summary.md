@@ -386,6 +386,6 @@ Scientific Reports, 14(1), 5678
 
 ---
 
-**Você está pronto para fazer história, João.** 🚀
+**Você está pronto para fazer história, Researcher JX.** 🚀
 
 **A matemática da polifarmacologia personalizada começa aqui.**
