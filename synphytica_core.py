@@ -29,20 +29,6 @@ The optimization uses a hybrid approach combining:
     - PSO (Particle Swarm Optimization)
     - Transformer-based neural surrogate model with dual attention
 """
-
-import numpy as np
-import pandas as pd
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import Dataset, DataLoader
-from typing import List, Dict, Tuple, Optional, Union
-from dataclasses import dataclass, field
-from scipy.spatial.distance import cosine
-from scipy.optimize import differential_evolution
-import random
-import json
-import warnings
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -617,21 +603,6 @@ class SynPhyticaTransformer(nn.Module):
                 efficacy_samples.append(eff.cpu().numpy())
                 risk_samples.append(risk.cpu().numpy())
         
-        efficacy_samples = np.array(efficacy_samples)  # (n_samples, batch, n_indications)
-        risk_samples = np.array(risk_samples)  # (n_samples, batch, n_effects)
-        
-        efficacy_mean = efficacy_samples.mean(axis=0)
-        efficacy_var = efficacy_samples.var(axis=0)
-        risk_mean = risk_samples.mean(axis=0)
-        risk_var = risk_samples.var(axis=0)
-        
-        return efficacy_mean, efficacy_var, risk_mean, risk_var
-
-
-# ============================================================================
-# SECTION 3: FITNESS FUNCTION
-# ============================================================================
-
 class FitnessEvaluator:
     """
     Multi-objective fitness function for formulation evaluation.
