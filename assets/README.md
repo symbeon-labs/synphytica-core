@@ -42,10 +42,10 @@ Visualização de Explainable AI (XAI)
 - Destaque: Identificação visual de sinergias (Entourage Effect)
 
 ### `images/neural_architecture_diagram.png`
-Diagrama técnico de patente (Esquemático)
-- Uso: Documentação técnica, pedidos de patente
-- Mostra: Fluxo de dados nos blocos de atenção (Self + Cross)
-- Estilo: Clean, técnico, alto contraste
+Diagrama técnico da arquitetura neural (Estilo Bio-Digital)
+- Uso: Documentação técnica, README (seção expansível)
+- Mostra: Fusão de redes neurais com estruturas orgânicas/moleculares
+- Estilo: Bioluminescente, conexões fluídas, verde/dourado sobre fundo escuro
 
 ### `images/optimization_process.gif`
 Animação do processo evolutivo
