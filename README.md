@@ -64,13 +64,10 @@ Watch the **Evolutionary Optimization Engine** in action. Starting from random c
 
 The heart of SynPhytica is a **Dual-Attention Transformer**. It processes the chemical profile of the plant and the biological profile of the patient to predict outcomes.
 
-<details>
-<summary><b>Click to view Technical Diagram</b></summary>
-<br>
 <div align="center">
-<img src="assets/images/neural_architecture_diagram.png" width="800" alt="Neural Architecture">
+<img src="assets/images/neural_architecture_diagram.png" width="100%" alt="Neural Architecture Bio-Digital Diagram">
+*Bio-Digital Fusion: Neural Networks decoding Plant Intelligence*
 </div>
-</details>
 
 ### Mathematical Foundation
 The fitness function $F(x,u)$ balances competing objectives:
