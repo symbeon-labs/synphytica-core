@@ -901,37 +901,6 @@ class SynPhyticaOptimizer:
                 global_best = individuals[best_idx].copy()
                 global_best_idx = best_idx
         
-        return individuals
-    
-    def update_pareto_front(self, population: np.ndarray, fitnesses: np.ndarray, details_list: List[Dict]):
-        """
-        Update Pareto front with non-dominated solutions.
-        """
-        # Simple Pareto dominance (can be extended to multi-objective)
-        for i, (individual, fitness, details) in enumerate(zip(population, fitnesses, details_list)):
-            dominated = False
-            for other_fitness in fitnesses:
-                if other_fitness > fitness:
-                    dominated = True
-                    break
-            
-            if not dominated:
-                result = FormulationResult(
-                    doses=individual,
-                    fitness=fitness,
-                    efficacy_scores=details['efficacy_scores'],
-                    risk_scores=details['risk_scores'],
-                    efficacy_variance=details['efficacy_var'],
-                    risk_variance=details['risk_var']
-                )
-                self.pareto_front.append(result)
-        
-        # Keep only top solutions
-        self.pareto_front = sorted(self.pareto_front, key=lambda x: x.fitness, reverse=True)[:20]
-    
-    def optimize(self) -> List[FormulationResult]:
-        """
-        Run hybrid optimization.
         
         Returns:
             List of FormulationResult objects (Pareto front)
