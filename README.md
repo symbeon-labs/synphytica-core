@@ -82,7 +82,17 @@ While **Medicinal Cannabis** is our primary validation case (due to data availab
 
 ---
 
-## 💻 Installation
+## 🐳 Docker (Recommended for Devs)
+
+Run the entire environment with a single command (no Python installation required):
+
+```bash
+docker-compose up --build
+```
+
+---
+
+## 💻 Manual Installation
 
 ```bash
 # 1. Clone the repository
