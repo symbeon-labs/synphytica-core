@@ -14,6 +14,10 @@
 
 ---
 
+> 📖 **New to SynPhytica?** See the complete system walkthrough in [`docs/WALKTHROUGH.md`](docs/WALKTHROUGH.md) for detailed architecture, validation results, and usage examples.
+
+---
+
 ## 📋 Overview
 
 **SynPhytica** is a computational framework that bridges the gap between ancient botanical wisdom and modern artificial intelligence. By treating molecular interactions as a language, it decodes the "Entourage Effect" to design personalized formulations that maximize therapeutic efficacy while minimizing risks.

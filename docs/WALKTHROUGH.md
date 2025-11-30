@@ -22,7 +22,7 @@
 
 ## 🌍 Project Overview
 
-SynPhytica is a **Deep Tech Bio-Platform** that uses advanced AI to design personalized phytotherapeutic formulations. It combines **Transformer Neural Networks** with **Evolutionary Algorithms** to optimize complex mixtures of botanical compounds.
+SynPhytica is a **Deep Tech Bio-Platform** that uses advanced AI to design personalized phytotherapeutic formulations. It combines a **Transformer Neural Network** with **Hybrid Evolutionary Algorithms** (NSGA-II + PSO) to optimize complex mixtures of botanical compounds.
 
 ### The Problem We Solve
 Traditional herbal medicine relies on:
@@ -99,7 +99,9 @@ Where:
 
 #### 4. Validation: Proof of Concept
 
-**Results from Google Colab Run:**
+> ⚠️ **Important Note**: The results below are from a **proof-of-concept validation** using **synthetically generated data**. These demonstrate the mathematical correctness and computational feasibility of the approach, but do not constitute clinical claims. Real-world validation with curated pharmaceutical data is ongoing.
+
+**Results from Google Colab Run (Synthetic Dataset):**
 - ✅ 52 compounds processed (9 cannabinoids + 43 terpenes)
 - ✅ 30 generation optimization completed
 - ✅ Fitness improved: -0.8055 → -0.8066 (convergence confirmed)
@@ -107,7 +109,7 @@ Where:
 - ✅ Top formulation: THCV (4.9%) + CBDV (3.9%) + Terpineol (3.3%)
 
 **Scientific Insight:**
-The AI independently discovered that **THCV + CBDV** is superior for pain relief without psychoactive effects - a pharmacologically sound conclusion validating the mathematical model.
+The AI independently discovered that **THCV + CBDV** combinations are mathematically optimal for the specified parameters - a result that aligns with existing pharmacological literature on non-psychoactive cannabinoids for pain management. This validates the model's ability to learn meaningful chemical patterns.
 
 ---
 
@@ -163,12 +165,14 @@ The AI independently discovered that **THCV + CBDV** is superior for pain relief
 
 ## 📊 Validation Results
 
+> ⚠️ **Disclaimer**: All results presented in this section are from **proof-of-concept testing with synthetic data** designed to validate the mathematical framework and computational architecture. These are not clinical trial results and do not make therapeutic claims.
+
 ### Colab Execution Summary
 
 **Environment:**
 - Runtime: Google Colab (GPU: T4, CUDA enabled)
 - Execution Time: ~2.5 minutes for 30 generations
-- Dataset: Synthetic Cannabis Library (52 compounds)
+- Dataset: **Synthetic Cannabis Library** (52 compounds with simulated pharmacological profiles)
 
 **User Profile (Test Case):**
 ```python
