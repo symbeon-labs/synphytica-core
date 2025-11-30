@@ -1,0 +1,150 @@
+{
+  "total_compounds": 14,
+  "total_fields": 18,
+  "fields": {
+    "Composto": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 13,
+      "sample_length": 4.785714285714286,
+      "has_data": true
+    },
+    "Arquivos": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 13,
+      "sample_length": 387.42857142857144,
+      "has_data": true
+    },
+    "BD / LINKS / ARTIGOS": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 13,
+      "sample_length": 477.35714285714283,
+      "has_data": true
+    },
+    "Classe": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 3,
+      "sample_length": 9.142857142857142,
+      "has_data": true
+    },
+    "Cultivo": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 3,
+      "sample_length": 17.214285714285715,
+      "has_data": true
+    },
+    "Dosagem Recomendada": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 13,
+      "sample_length": 344.7142857142857,
+      "has_data": true
+    },
+    "Efeitos Colaterais": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 7,
+      "sample_length": 23.571428571428573,
+      "has_data": true
+    },
+    "Efeitos Conhecidos": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 12,
+      "sample_length": 46.0,
+      "has_data": true
+    },
+    "Fontes": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 4,
+      "sample_length": 32.57142857142857,
+      "has_data": true
+    },
+    "Forma de Administra\u00e7\u00e3o": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 13,
+      "sample_length": 683.7857142857143,
+      "has_data": true
+    },
+    "Intera\u00e7\u00f5es Medicamentosas": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 13,
+      "sample_length": 490.2857142857143,
+      "has_data": true
+    },
+    "Legalidade e Regulamenta\u00e7\u00e3o": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 2,
+      "sample_length": 40.142857142857146,
+      "has_data": true
+    },
+    "METAFORIZA\u00c7\u00c3O": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 13,
+      "sample_length": 529.1428571428571,
+      "has_data": true
+    },
+    "M\u00e9todo de Extra\u00e7\u00e3o": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 2,
+      "sample_length": 27.142857142857142,
+      "has_data": true
+    },
+    "M\u00e9todos de Teste": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 1,
+      "sample_length": 31.785714285714285,
+      "has_data": true
+    },
+    "PUREZA": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 1,
+      "sample_length": 3.0,
+      "has_data": true
+    },
+    "Potencial Terap\u00eautico": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 13,
+      "sample_length": 48.714285714285715,
+      "has_data": true
+    },
+    "SUG.PESQ.CIENTIFIC ": {
+      "type": "object",
+      "non_null_count": 13,
+      "null_count": 1,
+      "unique_values": 13,
+      "sample_length": 874.5,
+      "has_data": true
+    }
+  }
+}

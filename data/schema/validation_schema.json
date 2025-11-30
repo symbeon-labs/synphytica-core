@@ -1,0 +1,116 @@
+{
+  "version": "1.0",
+  "required_fields": [
+    "Composto",
+    "Arquivos",
+    "BD / LINKS / ARTIGOS",
+    "Classe",
+    "Cultivo",
+    "Dosagem Recomendada",
+    "Efeitos Colaterais",
+    "Efeitos Conhecidos",
+    "Fontes",
+    "Forma de Administra\u00e7\u00e3o",
+    "Intera\u00e7\u00f5es Medicamentosas",
+    "Legalidade e Regulamenta\u00e7\u00e3o",
+    "METAFORIZA\u00c7\u00c3O",
+    "M\u00e9todo de Extra\u00e7\u00e3o",
+    "M\u00e9todos de Teste",
+    "PUREZA",
+    "Potencial Terap\u00eautico",
+    "SUG.PESQ.CIENTIFIC "
+  ],
+  "optional_fields": [],
+  "field_types": {
+    "Composto": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 4
+    },
+    "Arquivos": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 387
+    },
+    "BD / LINKS / ARTIGOS": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 477
+    },
+    "Classe": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 9
+    },
+    "Cultivo": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 17
+    },
+    "Dosagem Recomendada": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 344
+    },
+    "Efeitos Colaterais": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 23
+    },
+    "Efeitos Conhecidos": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 46
+    },
+    "Fontes": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 32
+    },
+    "Forma de Administra\u00e7\u00e3o": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 683
+    },
+    "Intera\u00e7\u00f5es Medicamentosas": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 490
+    },
+    "Legalidade e Regulamenta\u00e7\u00e3o": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 40
+    },
+    "METAFORIZA\u00c7\u00c3O": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 529
+    },
+    "M\u00e9todo de Extra\u00e7\u00e3o": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 27
+    },
+    "M\u00e9todos de Teste": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 31
+    },
+    "PUREZA": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 3
+    },
+    "Potencial Terap\u00eautico": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 48
+    },
+    "SUG.PESQ.CIENTIFIC ": {
+      "type": "string",
+      "description": "Field from proprietary schema",
+      "example_length": 874
+    }
+  }
+}

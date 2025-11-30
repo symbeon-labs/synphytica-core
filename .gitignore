@@ -87,3 +87,11 @@ Thumbs.db
 __pycache__/
 *.pdf
 .DS_Store
+
+# Proprietary Research Data (DO NOT COMMIT)
+Pesq.Cannabis/
+data/proprietary/
+*.proprietary.csv
+*.proprietary.json
+*_private.*
+research_notes/
