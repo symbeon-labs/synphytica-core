@@ -56,6 +56,42 @@ SynPhytica is a computational framework that combines:
 
 ---
 
+## 🌍 Scalability & Multi-Domain Applications
+
+While Cannabis is our primary validation case, the **SynPhytica Engine** is plant-agnostic. The underlying mathematical framework (Graph Neural Networks + Multi-Objective Optimization) is designed to decode the complexity of *any* botanical system.
+
+### 🚀 Target Domains
+
+1.  **Brazilian Biodiversity (Amazon/Cerrado)**
+    *   *Examples*: Copaíba, Andiroba, Açaí, Camu-Camu.
+    *   *Potential*: Discovery of new anti-inflammatories and cosmetics.
+    *   *Status*: Data acquisition phase.
+
+2.  **Traditional Chinese Medicine (TCM)**
+    *   *Examples*: Ginseng (*Panax*), Astragalus, Artemisia.
+    *   *Potential*: Modernizing ancient formulations with AI validation.
+    *   *Status*: Schema compatible.
+
+3.  **Ayurveda & Adaptogens**
+    *   *Examples*: Ashwagandha, Turmeric (Curcumin), Holy Basil.
+    *   *Potential*: Stress reduction and cognitive enhancement blends.
+    *   *Status*: Planned.
+
+4.  **Nutraceuticals & Functional Foods**
+    *   *Examples*: Bioactive compounds, Polyphenols, Terpenes.
+    *   *Potential*: Personalized nutrition and preventative health.
+
+---
+
+## 📊 Use Cases
+
+### 1. Medicinal Cannabis (Validation Case)
+- 52 compounds (9 cannabinoids + 43 terpenes)
+- 18 therapeutic indications
+- Validation with scientific literature
+
+---
+
 ## Key Features
 
 ✅ **Scientifically Grounded**: Based on network pharmacology and polypharmacology principles  
