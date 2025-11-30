@@ -4,8 +4,16 @@ This directory contains Jupyter notebooks for validating and demonstrating the S
 
 ## 📓 Available Notebooks
 
+### `SynPhytica_Validation_Standalone.ipynb`
+**Purpose**: Validation WITHOUT cloning the repository (works for private repos).
+
+**How it works**:
+1. You manually upload `synphytica_core.py` to Colab
+2. It runs the same validation steps as the standard notebook
+3. No GitHub credentials or public access required
+
 ### `SynPhytica_Validation.ipynb`
-**Purpose**: Complete validation of the SynPhytica optimization engine.
+**Purpose**: Complete validation cloning from public GitHub.
 
 **What it does**:
 1. Installs all dependencies
