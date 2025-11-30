@@ -40,6 +40,7 @@ env/
 # Jupyter Notebook
 .ipynb_checkpoints
 *.ipynb
+!notebooks/*.ipynb
 
 # PyTorch
 *.pth
