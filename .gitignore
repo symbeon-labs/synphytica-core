@@ -31,20 +31,6 @@ env/
 
 # IDE
 .vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
-
-# Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb
-!notebooks/*.ipynb
-
-# PyTorch
-*.pth
-*.pt
 checkpoints/
 models/saved/
 
