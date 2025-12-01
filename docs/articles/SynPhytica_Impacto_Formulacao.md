@@ -6,6 +6,8 @@
 
 ---
 
+![Polifarmacologia Generativa](images/hero.png)
+
 A farmacologia moderna foi construída sobre um dogma reducionista: para curar uma doença, encontre um alvo biológico (uma proteína, um receptor) e desenhe uma molécula ("bala mágica") para atingi-lo. Esse modelo salvou milhões de vidas, mas atingiu um muro de complexidade.
 
 Doenças crônicas, dor, ansiedade e inflamação raramente têm uma única causa. E as ferramentas mais antigas da humanidade para tratá-las — as plantas medicinais — nunca funcionaram com uma única molécula.
@@ -19,6 +21,8 @@ O problema? **A mente humana não consegue calcular sinergias de 50 compostos si
 ## O Que Construímos: Uma "Engine" de Sinergia
 
 O SynPhytica (v0.2.0-beta) não é apenas um recomendador. É uma plataforma de **Engenharia Farmacêutica Híbrida**. Nós paramos de tentar "adivinhar" a melhor formulação e passamos a "computar" a solução ótima.
+
+![Transformer Químico](images/transformer.png)
 
 ### 1. O "Transformer Químico"
 Assim como o ChatGPT prevê a próxima palavra que faz sentido em uma frase, o SynPhytica usa Redes Neurais (Transformers) para prever qual composto químico completa uma formulação para maximizar a eficácia terapêutica.
