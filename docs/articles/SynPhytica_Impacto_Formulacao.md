@@ -50,6 +50,8 @@ O SynPhytica gera uma **Fronteira de Pareto**: um conjunto de formulações óti
 - **Paciente A**: Recebe uma fórmula rica em Mirceno (sedativo) para dor + sono.
 - **Paciente B**: Recebe uma fórmula com Limoneno e THCV (energizante) para dor + foco.
 
+![Medicina Personalizada: O Impulso Vital](images/personalized.png)
+
 ### Segurança em Primeiro Lugar (Safety-First AI)
 Diferente de IAs que "alucinam" respostas com confiança total, o SynPhytica implementa **Quantificação de Incerteza**. Se o modelo não tem dados suficientes sobre uma interação medicamentosa, ele **penaliza** a formulação. Ele prefere dizer "não sei" do que recomendar algo arriscado.
 
@@ -57,7 +59,7 @@ Diferente de IAs que "alucinam" respostas com confiança total, o SynPhytica imp
 
 Acreditamos que o futuro da medicina não é "Sintético vs. Natural". É a precisão da engenharia aplicada à complexidade da natureza.
 
-Com o SynPhytica, estamos transformando a fitoterapia de uma "arte baseada em tradição" para uma "ciência baseada em dados". Estamos apenas no começo (v0.2.0), mas a fundação matemática está lançada.
+Com o SynPhytica, estamos transformando a fitoterapia de uma "arte baseada em tradição" para uma "ciência baseada em dados". Estamos injetando um **Élan Vital Digital** na farmacologia: um impulso evolutivo capaz de criar adaptações químicas precisas para a complexidade da vida humana.
 
 **Bem-vindos à era da Polifarmacologia Generativa.**
 

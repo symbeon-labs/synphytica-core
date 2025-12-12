@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynPhytica - Optimizing Formulation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0e27;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Courier New', monospace;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        .canvas-container {
+            position: relative;
+            width: 800px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        canvas {
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(0, 255, 200, 0.3);
+        }
+
+        .status-text {
+            color: #00ffc8;
+            font-size: 14px;
+            letter-spacing: 3px;
+            margin-top: 30px;
+            text-transform: uppercase;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .dots {
+            display: inline-block;
+            width: 20px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        .generation-counter {
+            color: #888;
+            font-size: 12px;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+
+        .logo {
+            color: #00ffc8;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">SYNPHYTICA</div>
+        <div class="canvas-container">
+            <canvas id="canvas" width="800" height="400"></canvas>
+        </div>
+        <div class="status-text">
+            OPTIMIZING_FORMULATION<span class="dots"></span>
+        </div>
+        <div class="generation-counter">GENERATION: <span id="gen">0</span> / 50</div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const dotsEl = document.querySelector('.dots');
+        const genEl = document.getElementById('gen');
+
+        // Compound particles
+        class Compound {
+            constructor(x, y, color, size) {
+                this.x = x;
+                this.y = y;
+                this.targetX = x;
+                this.targetY = y;
+                this.color = color;
+                this.size = size;
+                this.vx = 0;
+                this.vy = 0;
+                this.connections = [];
+            }
+
+            update() {
+                // Smooth movement towards target
+                this.vx += (this.targetX - this.x) * 0.05;
+                this.vy += (this.targetY - this.y) * 0.05;
+                this.vx *= 0.9;
+                this.vy *= 0.9;
+                this.x += this.vx;
+                this.y += this.vy;
+            }
+
+            draw() {
+                // Glow effect
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = this.color;
+                
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                
+                ctx.shadowBlur = 0;
+            }
+
+            setTarget(x, y) {
+                this.targetX = x;
+                this.targetY = y;
+            }
+        }
+
+        // Initialize compounds
+        const compounds = [];
+        const colors = ['#00ffc8', '#00ff88', '#00cc99', '#00aa77', '#008866', '#00ffa0', '#00ddaa'];
+        const numCompounds = 12;
+
+        for (let i = 0; i < numCompounds; i++) {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * canvas.height;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            const size = 4 + Math.random() * 4;
+            compounds.push(new Compound(x, y, color, size));
+        }
+
+        // Animation state
+        let generation = 0;
+        let phase = 0; // 0: random, 1: clustering, 2: optimal
+        let frameCount = 0;
+        let dotCount = 0;
+
+        function drawConnections() {
+            ctx.strokeStyle = 'rgba(0, 255, 200, 0.1)';
+            ctx.lineWidth = 1;
+
+            for (let i = 0; i < compounds.length; i++) {
+                for (let j = i + 1; j < compounds.length; j++) {
+                    const dx = compounds[i].x - compounds[j].x;
+                    const dy = compounds[i].y - compounds[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 150) {
+                        const alpha = (1 - dist / 150) * 0.3;
+                        ctx.strokeStyle = `rgba(0, 255, 200, ${alpha})`;
+                        ctx.beginPath();
+                        ctx.moveTo(compounds[i].x, compounds[i].y);
+                        ctx.lineTo(compounds[j].x, compounds[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function updatePhase() {
+            if (frameCount % 120 === 0) {
+                generation = Math.min(generation + 1, 50);
+                genEl.textContent = generation;
+
+                if (generation < 20) {
+                    phase = 0; // Random exploration
+                } else if (generation < 40) {
+                    phase = 1; // Clustering
+                } else {
+                    phase = 2; // Optimal solution
+                }
+
+                // Update targets based on phase
+                compounds.forEach((c, i) => {
+                    if (phase === 0) {
+                        // Random positions
+                        c.setTarget(
+                            100 + Math.random() * 600,
+                            100 + Math.random() * 200
+                        );
+                    } else if (phase === 1) {
+                        // Cluster formation
+                        const angle = (i / compounds.length) * Math.PI * 2;
+                        const radius = 100;
+                        c.setTarget(
+                            canvas.width / 2 + Math.cos(angle) * radius,
+                            canvas.height / 2 + Math.sin(angle) * radius
+                        );
+                    } else {
+                        // Optimal formation (golden ratio spiral)
+                        const goldenAngle = Math.PI * (3 - Math.sqrt(5));
+                        const angle = i * goldenAngle;
+                        const radius = 15 * Math.sqrt(i);
+                        c.setTarget(
+                            canvas.width / 2 + Math.cos(angle) * radius,
+                            canvas.height / 2 + Math.sin(angle) * radius
+                        );
+                        c.color = '#ffd700'; // Gold color for optimal
+                    }
+                });
+            }
+        }
+
+        function updateDots() {
+            if (frameCount % 20 === 0) {
+                dotCount = (dotCount + 1) % 4;
+                dotsEl.textContent = '.'.repeat(dotCount);
+            }
+        }
+
+        function animate() {
+            ctx.fillStyle = 'rgba(10, 14, 39, 0.2)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            drawConnections();
+
+            compounds.forEach(c => {
+                c.update();
+                c.draw();
+            });
+
+            updatePhase();
+            updateDots();
+
+            frameCount++;
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
