@@ -7,7 +7,6 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SH1W4/synphytica-core/blob/main/notebooks/SynPhytica_Validation.ipynb)
 [![English](https://img.shields.io/badge/🇬🇧_English-Documentation-blue?style=for-the-badge)](../en/README.md)
 [![Web Interface](https://img.shields.io/badge/🚀_Web_App-v0.2.0-cyan?style=for-the-badge)](../../web/)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](../../LICENSE)
 
 **Framework de IA para Otimização Personalizada de Formulações Fitoterápicas**
 
@@ -15,7 +14,9 @@
 
 ---
 
-> 🧬 **GRANDE ATUALIZAÇÃO (v0.2.0):** A **Interface Web SynPhytica** está no ar! Experimente o **Visualizador de Campo Neural** e a **Documentação Interativa** diretamente no seu navegador.
+> 📖 **Novo no SynPhytica?** Veja o guia completo do sistema em [`../guide/WALKTHROUGH.md`](../guide/WALKTHROUGH.md).
+>
+> 🧬 **ATUALIZAÇÃO (v0.2.0):** A **Interface Web** está ativa! Acesse o Visualizador Neural em `/web`.
 
 ---
 
@@ -23,80 +24,91 @@
 
 **SynPhytica** é um framework computacional inovador que aplica inteligência artificial, otimização multiobjetivo e farmacologia de rede para o design racional de formulações fitoterápicas personalizadas. Inspirado por avanços recentes em biologia computacional, SynPhytica transpõe técnicas de deep learning e algoritmos evolutivos para o universo da medicina natural.
 
-### 🎯 Problema Resolvido
-
-Como desenhar, de modo objetivo e cientificamente justificável, uma formulação natural customizada para um paciente específico, em um universo de milhares de compostos possíveis, sem depender exclusivamente de tradição empírica ou tentativa-erro?
-
-### 💡 Solução
-
-SynPhytica formaliza matematicamente o problema de **polypharmacology personalizada**, balanceando eficácia, segurança e incerteza.
+Diferente da descoberta de medicamentos tradicional baseada em "uma molécula, um alvo", o SynPhytica abraça a **Polifarmacologia** — otimizando misturas complexas de compostos (Canabinoides, Terpenos, Flavonoides) para sinergia em múltiplos alvos.
 
 ---
 
-## 🚀 Interface Web SynPhytica
+## 🚀 Interface Web SynPhytica (Novo)
 
-O novo frontend (`/web`) traz o núcleo matemático à vida, oferecendo uma experiência tátil e visual para pesquisadores e investidores.
+O novo frontend (`/web`) traz o núcleo matemático à vida, oferecendo uma experiência tátil e visual.
 
 ### 🌌 Visualizador de Campo Neural (v4.0)
 Uma simulação física interativa que representa o processo de otimização como um sistema biológico "vivo".
 - **Do Caos à Ordem**: Observe moléculas se organizarem de alta entropia para clusters Pareto-ótimos.
-- **Inspetor Químico**: Clique em partículas para revelar dados reais dos compostos (CBD, Limoneno, Mirceno) via cartões holográficos.
-- **Feedback Tátil**: A visualização reage ao movimento do mouse, simulando dinâmica de fluidos.
-- **Maestro IA**: Um agente autônomo monitora pontuações de sinergia e narra o processo de otimização.
+- **Inspetor Químico**: Clique em partículas para revelar dados reais via cartões holográficos.
+- **Maestro IA**: Um agente autônomo monitora pontuações de sinergia e narra o processo.
 
-### 📚 Documentação Interativa
-Acesse o whitepaper completo, diagramas de arquitetura e referências de API diretamente através do dashboard web em `/docs`.
+### 🪙 DeSci & Financiamento Anônimo
+SynPhytica opera como um protocolo de **Ciência Descentralizada (DeSci)**.
+- **Sem KYC**: Apoie a pesquisa anonimamente via Cripto (BTC, ETH, SOL).
+- **Computação Direta**: Fundos vão direto para clusters de GPU.
 
 ---
 
-## 🔬 Fundamentos Científicos
+## ⚡ Demo: Motor de Otimização
 
-### Modelagem Matemática
+Veja o **SynPhytica Engine** evoluir formulações em tempo real. A animação abaixo visualiza as 3 fases do nosso algoritmo genético:
 
-O framework baseia-se em uma função de fitness multiobjetivo:
-
-```
-F(x,u) = αE(x,u) - βR(x,u) + γM(x,u) - δP(x) - εU(x,u)
-```
-
-Onde:
-- **E(x,u)**: Eficácia prevista ponderada
-- **R(x,u)**: Riscos ponderados
-- **M(x,u)**: Match de preferências
-- **P(x)**: Penalidades de restrições
-- **U(x,u)**: Penalização por incerteza
-
-### Arquitetura Neural
-
-O coração do SynPhytica é um modelo Transformer especializado que processa a "linguagem" das interações moleculares.
+1. **Exploração**: Amostragem aleatória (Caos Verde)
+2. **Clusterização**: Encontrando pontos de sinergia
+3. **Convergência de Pareto**: Ajuste fino para a Proporção Áurea (Soluções Ótimas)
 
 <div align="center">
-<img src="../../assets/images/neural_architecture_diagram.png" width="100%" alt="Neural Architecture Bio-Digital Diagram">
+
+![SynPhytica Optimization Demo](../../docs/articles/images/synphytica_demo.gif)
+
 </div>
 
 ---
 
-## 🪙 DeSci & Financiamento Anônimo
+## 🌟 Principais Recursos
 
-SynPhytica opera como um protocolo de **Ciência Descentralizada (DeSci)**. Acreditamos na pesquisa aberta sem gargalos burocráticos.
-
-- **Sem KYC**: Apoie a pesquisa anonimamente via Cripto (BTC, ETH, SOL).
-- **Computação Direta**: Os fundos são alocados diretamente para clusters GPU para treinamento de modelos.
-- **Acesso**: Contribuidores recebem acesso antecipado a chaves de API.
-
-*Confira o módulo "Support R&D" na página de documentação da Interface Web.*
+| Recurso | Descrição |
+| :--- | :--- |
+| **🧠 Núcleo Transformer** | Usa mecanismos de Self-Attention para modelar sinergias não-lineares. |
+| **🧬 Multi-Objetivo** | Otimiza simultaneamente para Eficácia, Segurança e Preferências (NSGA-II). |
+| **🔍 Explainable AI** | Abordagem "caixa de vidro" permitindo visualizar pesos de atenção (Mapas de Calor). |
+| **🛡️ Incerteza UQ** | Quantificação via Monte Carlo Dropout para garantir previsões "Safety-First". |
+| **🌿 Planta-Agnóstico** | Desenhado para Cannabis, mas adaptável para MTC, Ayurveda e flora Amazônica. |
 
 ---
 
-## 💻 Instalação e Uso
+## 🧠 Arquitetura Neural
+
+O coração do SynPhytica é um **Dual-Attention Transformer**. Ele processa o perfil químico da planta e o perfil biológico do paciente para prever resultados.
+
+<div align="center">
+<img src="../../assets/images/neural_architecture_diagram.png" width="100%" alt="Arquitetura Neural Diagrama">
+*Fusão Bio-Digital: Redes Neurais decodificando a Inteligência das Plantas*
+</div>
+
+---
+
+## 🌍 Escalabilidade e Multidomínio
+
+Embora a **Cannabis Medicinal** seja nosso caso de validação primário, o SynPhytica Engine foi projetado para decodificar a complexidade de *qualquer* sistema botânico.
+
+### 🚀 Domínios Alvo
+1.  **🇧🇷 Biodiversidade Brasileira (Amazônia/Cerrado)**: Copaíba, Andiroba, Açaí.
+2.  **🇨🇳 Medicina Tradicional Chinesa (MTC)**: *Panax ginseng*, *Astragalus*.
+3.  **🇮🇳 Ayurveda**: Ashwagandha, Curcumina.
+
+---
+
+## 💻 Instalação Manual
 
 ### 1. Motor Principal (Python/Rust)
 
 ```bash
+# Clone
 git clone https://github.com/SH1W4/synphytica-core.git
 cd synphytica-core
+
+# Setup Venv
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install
 pip install -r requirements.txt
 ```
 
@@ -111,13 +123,30 @@ Acesse o dashboard em `http://localhost:3000`.
 
 ---
 
-## 🌍 Escalabilidade e Multidomínio
+## 📂 Estrutura do Projeto
 
-Embora a **Cannabis Medicinal** seja nosso caso de validação primário, o SynPhytica Engine foi projetado para decodificar a complexidade de *qualquer* sistema botânico:
+```text
+SynPhytica/
+├── 🧠 synphytica_core.py       # Core AI Engine
+├── 🌐 web/                     # Next.js Application (Interface Ativa)
+├── 📊 data/
+│   ├── raw/                    # Dados brutos
+│   ├── processed/              # CSVs limpos
+│   └── schema/                 # Schemas de validação
+├── 📚 docs/
+│   ├── en/                     # Documentação em Inglês
+│   ├── pt/                     # Documentação em Português
+│   └── COMPOUND_DATA_SCHEMA.md # Padrões de Contribuição
+├── 🧪 examples/                # Scripts de uso
+└── 🎨 assets/                  # Imagens e Visuais
+```
 
-1.  **🇧🇷 Biodiversidade Brasileira** (Copaíba, Andiroba, Açaí)
-2.  **🇨🇳 Medicina Tradicional Chinesa** (Panax ginseng)
-3.  **🇮🇳 Ayurveda** (Ashwagandha)
+---
+
+## 🤝 Contribuindo
+
+Congratulamos contribuições de desenvolvedores, farmacologistas e cientistas de dados!
+- Veja [CONTRIBUTING.md](../../CONTRIBUTING.md) para diretrizes.
 
 ---
 
@@ -131,7 +160,7 @@ Se você usar o SynPhytica em sua pesquisa, por favor cite:
   title = {SynPhytica: AI-Powered Framework for Personalized Phytotherapeutic Formulation Optimization},
   year = {2025},
   publisher = {GitHub},
-  url = {https://github.com/SH1W4/synphytica-core}
+  version = {0.2.0-beta}
 }
 ```
 
