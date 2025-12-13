@@ -1,29 +1,38 @@
 import OptimizationVisualizer from '@/components/OptimizationVisualizer';
 import { BeakerIcon, ArrowUpTrayIcon, ServerIcon } from '@heroicons/react/24/outline'; // Exemplo, usaremos SVG direto se icons falharem
 
+import CryptoFunding from "@/components/CryptoFunding";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-8 gap-8 relative overflow-hidden">
+    <main className="flex min-h-screen flex-col bg-[#050914] text-gray-200 font-sans selection:bg-cyan-500/30 relative">
 
       {/* Background Decor */}
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/40 via-[#0a0e27] to-[#0a0e27] -z-10" />
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 via-[#050914] to-[#050914] pointer-events-none -z-10" />
 
-      {/* Header */}
-      <header className="w-full max-w-5xl flex justify-between items-center border-b border-white/10 pb-6">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-cyan-400/10 rounded-lg flex items-center justify-center border border-cyan-400">
-            <span className="text-xl">🧬</span>
+      {/* HEADER */}
+      <header className="border-b border-white/5 bg-[#0a0e27]/80 backdrop-blur-md sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center font-bold text-black">
+              S
+            </div>
+            <div className="flex flex-col">
+              <h1 className="text-lg font-bold tracking-tight text-white leading-none">SynPhytica <span className="text-cyan-400 text-[10px] align-top">CORE</span></h1>
+              <p className="text-[10px] text-gray-400 font-mono">Generative Polypharmacology v0.2.0</p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-2xl font-bold tracking-tight text-white">SynPhytica <span className="text-cyan-400 text-sm font-normal border border-cyan-400/30 px-2 py-0.5 rounded-full ml-2">Beta v0.2.0</span></h1>
-            <p className="text-xs text-gray-400 font-mono">Reference Pharmacopoeia v1.0 Active</p>
-          </div>
+          <nav className="flex items-center gap-6 text-sm text-gray-400">
+            <a href="/docs" className="hover:text-cyan-400 transition-colors">Documentation</a>
+            {/* Schema link hidden for demo cleanliness */}
+            {/* <a href="#" className="hover:text-cyan-400 transition-colors">Schema</a> */}
+            <CryptoFunding />
+            <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/30 border border-cyan-800/30 text-cyan-400">
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+              <span className="text-xs font-mono">SYSTEM ONLINE</span>
+            </div>
+          </nav>
         </div>
-        <nav className="flex gap-6 text-sm text-gray-400">
-          <a href="#" className="hover:text-cyan-400 transition-colors">Documentation</a>
-          <a href="#" className="hover:text-cyan-400 transition-colors">Schema</a>
-          <a href="#" className="text-cyan-400">Dashboard</a>
-        </nav>
       </header>
 
       {/* Main Grid */}
