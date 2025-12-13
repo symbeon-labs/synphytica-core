@@ -1,3 +1,5 @@
+import CryptoFunding from "@/components/CryptoFunding";
+
 export default function Documentation() {
     return (
         <main className="min-h-screen bg-[#0a0e27] text-gray-300 font-sans selection:bg-cyan-400 selection:text-black">
@@ -10,11 +12,11 @@ export default function Documentation() {
                         <span className="font-bold text-white tracking-tight">SynPhytica <span className="text-cyan-400 font-normal">Docs</span></span>
                     </a>
                 </div>
-                <div className="flex gap-4 text-sm">
-                    <a href="#intro" className="hover:text-cyan-400 transition-colors">Vision</a>
-                    <a href="#technology" className="hover:text-cyan-400 transition-colors">Technology</a>
-                    <a href="#capabilities" className="hover:text-cyan-400 transition-colors">Capabilities</a>
-                    <a href="/" className="px-4 py-1.5 rounded-full border border-white/20 hover:bg-white/10 hover:border-cyan-400 hover:text-cyan-400 transition-all ml-4">Back to Dashboard</a>
+                <div className="flex items-center gap-4 text-sm">
+                    <a href="#intro" className="hidden md:block hover:text-cyan-400 transition-colors">Vision</a>
+                    <a href="#technology" className="hidden md:block hover:text-cyan-400 transition-colors">Technology</a>
+                    <CryptoFunding />
+                    <a href="/" className="px-4 py-1.5 rounded-full border border-white/20 hover:bg-white/10 hover:border-cyan-400 hover:text-cyan-400 transition-all ml-2">App</a>
                 </div>
             </nav>
 
