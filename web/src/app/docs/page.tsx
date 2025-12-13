@@ -54,9 +54,66 @@ export default function Documentation() {
                         <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                             <span className="text-cyan-400 text-sm font-mono border border-cyan-400/30 px-2 py-1 rounded">02</span> Core Technology
                         </h2>
-                        <p className="leading-relaxed mb-6">
+                        <p className="leading-relaxed mb-8">
                             Our proprietary platform integrates three cutting-edge engines to solve the combinatorial explosion problem in drug discovery.
                         </p>
+
+                        {/* ARCHITECTURE DIAGRAM (SVG/CSS) */}
+                        <div className="w-full bg-[#05081a] border border-white/10 rounded-xl p-8 mb-10 overflow-hidden relative group">
+                            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+
+                            {/* Flowchart Container */}
+                            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-2">
+
+                                {/* Node 1: INPUT */}
+                                <div className="flex flex-col items-center gap-2">
+                                    <div className="w-16 h-16 rounded-lg border-2 border-gray-600 bg-gray-900/50 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+                                        <span className="text-2xl">🧬</span>
+                                    </div>
+                                    <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">Input Data</span>
+                                </div>
+
+                                {/* Arrow */}
+                                <div className="h-8 w-0.5 md:h-0.5 md:w-12 bg-gray-700 relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-cyan-500/50 animate-[shimmer_2s_infinite]"></div>
+                                </div>
+
+                                {/* Node 2: NEURAL CORE */}
+                                <div className="flex flex-col items-center gap-2">
+                                    <div className="w-20 h-20 rounded-full border-2 border-cyan-500 bg-cyan-900/20 flex items-center justify-center shadow-[0_0_30px_rgba(0,255,200,0.2)] animate-pulse">
+                                        <svg className="w-8 h-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                    </div>
+                                    <span className="text-[10px] font-mono text-cyan-400 uppercase tracking-widest font-bold">Neural Core</span>
+                                </div>
+
+                                {/* Arrow */}
+                                <div className="h-8 w-0.5 md:h-0.5 md:w-12 bg-gray-700 relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-cyan-500/50 animate-[shimmer_2s_infinite] delay-75"></div>
+                                </div>
+
+                                {/* Node 3: EVOLUTION ENGINE */}
+                                <div className="flex flex-col items-center gap-2">
+                                    <div className="w-20 h-20 rounded-full border-2 border-gold-400 bg-yellow-900/20 flex items-center justify-center shadow-[0_0_30px_rgba(255,215,0,0.2)]">
+                                        <svg className="w-8 h-8 text-gold-400 animate-[spin_10s_linear_infinite]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+                                    </div>
+                                    <span className="text-[10px] font-mono text-gold-400 uppercase tracking-widest font-bold">Evolution</span>
+                                </div>
+
+                                {/* Arrow */}
+                                <div className="h-8 w-0.5 md:h-0.5 md:w-12 bg-gray-700 relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-cyan-500/50 animate-[shimmer_2s_infinite] delay-150"></div>
+                                </div>
+
+                                {/* Node 4: OUTPUT */}
+                                <div className="flex flex-col items-center gap-2">
+                                    <div className="w-16 h-16 rounded-lg border-2 border-green-500 bg-green-900/20 flex items-center justify-center shadow-[0_0_20px_rgba(0,255,0,0.1)]">
+                                        <span className="text-2xl">💊</span>
+                                    </div>
+                                    <span className="text-[10px] font-mono text-green-400 uppercase tracking-widest">Optimized Formula</span>
+                                </div>
+
+                            </div>
+                        </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
                             <div className="bg-white/5 p-6 rounded-xl border border-white/10">
@@ -97,7 +154,79 @@ export default function Documentation() {
                         </div>
                     </section>
 
-                    {/* 4. Contact */}
+                    {/* 4. Developers & API (Enterprise Ready) */}
+                    <section id="developers">
+                        <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                            <span className="text-cyan-400 text-sm font-mono border border-cyan-400/30 px-2 py-1 rounded">04</span> Developers & Integration
+                        </h2>
+                        <p className="mb-6 text-gray-300">
+                            SynPhytica is built as an API-First platform, designed to integrate seamlessly into existing Hospital Information Systems (HIS) and Electronic Health Records (EHR) via secure RESTful endpoints.
+                        </p>
+
+                        <div className="bg-[#0f1429] rounded-xl border border-white/10 overflow-hidden shadow-2xl mb-8">
+                            <div className="flex items-center justify-between px-4 py-2 bg-white/5 border-b border-white/5">
+                                <span className="text-xs font-mono text-gray-400">POST /v1/optimize</span>
+                                <div className="flex gap-1.5">
+                                    <div className="w-2.5 h-2.5 rounded-full bg-red-500/20"></div>
+                                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/20"></div>
+                                    <div className="w-2.5 h-2.5 rounded-full bg-green-500/20"></div>
+                                </div>
+                            </div>
+                            <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
+                                {/* Request */}
+                                <div>
+                                    <div className="text-gray-500 mb-2">// Request Formulation from EHR</div>
+                                    <pre className="text-cyan-300">
+                                        {`{
+  "auth_token": "sk_live_...",
+  "patient_profile": {
+    "id": "anon_8492X",
+    "target": "chronic_pain",
+    "restrictions": ["no_thc"]
+  },
+  "constraints": {
+    "delivery": "oral_oil",
+    "max_cost": 200.00
+  }
+}`}
+                                    </pre>
+                                </div>
+                                {/* Response */}
+                                <div className="border-l border-white/5 pl-4 opacity-80">
+                                    <div className="text-gray-500 mb-2">// SynPhytica Response (34ms)</div>
+                                    <pre className="text-green-300">
+                                        {`{
+  "status": "optimized",
+  "candidate": {
+    "id": "syn_v9_22",
+    "synergy_score": 0.98,
+    "components": [
+      { "name": "CBD", "ratio": 0.8 },
+      { "name": "Beta-Caryophyllene", "ratio": 0.15 },
+      { "name": "Myrcene", "ratio": 0.05 }
+    ]
+  }
+}`}
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Compliance Badge */}
+                        <div className="flex flex-col md:flex-row gap-4 items-center bg-green-900/10 border border-green-500/30 p-4 rounded-lg">
+                            <div className="p-3 bg-green-500/20 rounded-full text-green-400">
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 className="text-white font-bold text-sm">HIPAA & GDPR Compliant Processing</h4>
+                                <p className="text-xs text-gray-400 mt-1">
+                                    All patient data is anonymized at the edge. The SynPhytica Core Engine processes mathematical vectors, never PII (Personally Identifiable Information). End-to-end encryption (AES-256) is standard.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* 5. Contact */}
                     <section id="contact">
                         <div className="bg-gradient-to-r from-cyan-900/20 to-transparent p-8 rounded-2xl border border-cyan-500/20 text-center">
                             <h3 className="text-2xl font-bold text-white mb-4">Investment & Partnerships</h3>
