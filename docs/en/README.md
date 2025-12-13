@@ -49,7 +49,7 @@ Watch the **SynPhytica Engine** evolve formulations in real-time. The animation 
 
 <div align="center">
 
-![SynPhytica Optimization Demo](../../docs/articles/images/synphytica_demo.gif)
+![SynPhytica Optimization Demo](../articles/images/synphytica_demo.gif)
 
 </div>
 

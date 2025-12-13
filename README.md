@@ -28,15 +28,18 @@ Unlike traditional drug discovery that focuses on single-molecule targets, SynPh
 
 ## ⚡ Demo
 
-### 🎬 Interactive Optimization Visualization
-Experience the SynPhytica optimization engine in action:
+### 🎬 Optimization Engine Visualization
+Watch the **SynPhytica Engine** evolve formulations in real-time. The animation below visualizes the 3 phases of our genetic algorithm:
 
-**[▶️ View Live Animation](docs/articles/images/synphytica_animation.html)** - Watch compounds evolve through NSGA-II + PSO optimization
+1. **Exploration**: Random sampling (Green Chaos)
+2. **Clusterization**: Finding synergy hotspots
+3. **Pareto Convergence**: Fine-tuning to Golden Ratio (Optimal Solutions)
 
-The animation visualizes:
-- **Phase 1 (Gen 0-20)**: Random exploration of chemical space
-- **Phase 2 (Gen 20-40)**: Clustering around promising formulations  
-- **Phase 3 (Gen 40-50)**: Convergence to Pareto-optimal solutions (golden spiral)
+<div align="center">
+
+![SynPhytica Optimization Demo](docs/articles/images/synphytica_demo.gif)
+
+</div>
 
 ---
 
