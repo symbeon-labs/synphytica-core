@@ -40,6 +40,19 @@ SynPhytica mathematically formalizes the problem of **personalized polypharmacol
 
 </div>
 
+### 🎬 Interactive Optimization Visualization
+
+Experience the SynPhytica optimization engine in action:
+
+**[▶️ View Live Animation](../../docs/articles/images/synphytica_animation.html)** - Watch compounds evolve through NSGA-II + PSO optimization
+
+The animation visualizes:
+- **Phase 1 (Gen 0-20)**: Random exploration of chemical space
+- **Phase 2 (Gen 20-40)**: Clustering around promising formulations  
+- **Phase 3 (Gen 40-50)**: Convergence to Pareto-optimal solutions (golden spiral)
+
+---
+
 ### ⚡ See SynPhytica in Action
 
 The GIF below demonstrates the formulation evolution process. Starting from random combinations (scattered points), the algorithm rapidly converges to the **Pareto Frontier** (golden points), maximizing efficacy while minimizing risks.
