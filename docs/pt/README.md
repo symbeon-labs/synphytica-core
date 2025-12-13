@@ -39,16 +39,17 @@ SynPhytica formaliza matematicamente o problema de **polypharmacology personaliz
 
 </div>
 
-### 🎬 Visualização Interativa da Otimização
+### 🎬 Visualização do Motor de Otimização
+Veja o **SynPhytica Engine** evoluir formulações em tempo real. A animação abaixo visualiza as 3 fases do nosso algoritmo genético:
+1. **Exploração**: Amostragem aleatória (Caos Verde)
+2. **Clusterização**: Encontrando pontos de sinergia
+3. **Convergência de Pareto**: Ajuste fino para a Proporção Áurea (Soluções Ótimas)
 
-Experimente o motor de otimização do SynPhytica em ação:
+<div align="center">
 
-**[▶️ Ver Animação Ao Vivo](../../docs/articles/images/synphytica_animation.html)** - Assista compostos evoluírem através da otimização NSGA-II + PSO
+![SynPhytica Optimization Demo](../../docs/articles/images/synphytica_demo.gif)
 
-A animação visualiza:
-- **Fase 1 (Gen 0-20)**: Exploração aleatória do espaço químico
-- **Fase 2 (Gen 20-40)**: Agrupamento em torno de formulações promissoras  
-- **Fase 3 (Gen 40-50)**: Convergência para soluções Pareto-ótimas (espiral dourada)
+</div>
 
 ---
 
