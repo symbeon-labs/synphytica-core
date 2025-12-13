@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it as below."
+authors:
+- family-names: "X"  # Substitua pelo seu sobrenome real se desejar
+  given-names: "Researcher JX" # Substitua pelo seu nome real
+  affiliation: "Symbeon Labs"
+  orcid: "https://orcid.org/0000-0000-0000-0000" # Se tiver ORCID, coloque aqui
+title: "SynPhytica: An AI-Powered Framework for Personalized Phytotherapeutic Formulation Optimization"
+version: 0.2.0-beta
+doi: 10.5281/zenodo.123456 # Exemplo (pode ser gerado pelo Zenodo linkado ao GitHub)
+date-released: 2025-12-12
+url: "https://github.com/symbeon-labs/synphytica-core"
+keywords:
+  - bioinformatics
+  - artificial-intelligence
+  - optimization
+  - rust
+  - phytotherapy
+  - personalized-medicine
+license: Apache-2.0
+repository-code: "https://github.com/symbeon-labs/synphytica-core"
+abstract: >-
+  SynPhytica is a hybrid computational framework (Python/Rust) designed to optimize 
+  phytotherapeutic formulations using Multi-Objective Evolutionary Algorithms (NSGA-II) 
+  and Transformer-based neural networks. It addresses the complexity of the "Entourage Effect" 
+  by modeling molecular synergy as a linguistic problem, enabling the generation of 
+  Pareto-optimal formulations tailored to specific patient profiles and therapeutic goals.
