@@ -2,16 +2,20 @@
 
 <div align="center">
 
-![SynPhytica Banner](assets/images/banner.png)
+![SynPhytica Banner](../../assets/images/banner.png)
 
-**AI-Powered Framework for Personalized Phytotherapeutic Formulation Optimization**
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SH1W4/synphytica-core/blob/main/notebooks/SynPhytica_Validation.ipynb)
+[![English](https://img.shields.io/badge/🇬🇧_English-Documentation-blue?style=for-the-badge)](../en/README.md)
+[![Web Interface](https://img.shields.io/badge/🚀_Web_App-v0.2.0-cyan?style=for-the-badge)](../../web/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](../../LICENSE)
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red.svg)](https://pytorch.org/)
-[![Status](https://img.shields.io/badge/Status-Research-yellow.svg)]()
+**Framework de IA para Otimização Personalizada de Formulações Fitoterápicas**
 
 </div>
+
+---
+
+> 🧬 **GRANDE ATUALIZAÇÃO (v0.2.0):** A **Interface Web SynPhytica** está no ar! Experimente o **Visualizador de Campo Neural** e a **Documentação Interativa** diretamente no seu navegador.
 
 ---
 
@@ -25,44 +29,23 @@ Como desenhar, de modo objetivo e cientificamente justificável, uma formulaçã
 
 ### 💡 Solução
 
-SynPhytica formaliza matematicamente o problema de **polypharmacology personalizada**, balanceando:
-- ✅ **Eficácia terapêutica** para indicações específicas
-- ⚠️ **Segurança** e minimização de riscos
-- 🎨 **Preferências do paciente** (sabor, forma, rotina)
-- ⚖️ **Restrições regulatórias** e de dose
-- 📊 **Incerteza epistemológica** das previsões
-
-<div align="center">
-
-![Conceito SynPhytica](assets/images/concept.png)
-*Fusão de Matemática, IA e Medicina Natural*
-
-</div>
-
-### 🎬 Visualização do Motor de Otimização
-Veja o **SynPhytica Engine** evoluir formulações em tempo real. A animação abaixo visualiza as 3 fases do nosso algoritmo genético:
-1. **Exploração**: Amostragem aleatória (Caos Verde)
-2. **Clusterização**: Encontrando pontos de sinergia
-3. **Convergência de Pareto**: Ajuste fino para a Proporção Áurea (Soluções Ótimas)
-
-<div align="center">
-
-![SynPhytica Optimization Demo](../articles/images/synphytica_demo.gif)
-
-</div>
+SynPhytica formaliza matematicamente o problema de **polypharmacology personalizada**, balanceando eficácia, segurança e incerteza.
 
 ---
 
-### ⚡ Veja o SynPhytica em Ação
+## 🚀 Interface Web SynPhytica
 
-O GIF abaixo demonstra o processo de evolução das formulações. Partindo de combinações aleatórias (pontos dispersos), o algoritmo converge rapidamente para a **Fronteira de Pareto** (pontos dourados), maximizando a eficácia enquanto minimiza os riscos.
+O novo frontend (`/web`) traz o núcleo matemático à vida, oferecendo uma experiência tátil e visual para pesquisadores e investidores.
 
-<div align="center">
+### 🌌 Visualizador de Campo Neural (v4.0)
+Uma simulação física interativa que representa o processo de otimização como um sistema biológico "vivo".
+- **Do Caos à Ordem**: Observe moléculas se organizarem de alta entropia para clusters Pareto-ótimos.
+- **Inspetor Químico**: Clique em partículas para revelar dados reais dos compostos (CBD, Limoneno, Mirceno) via cartões holográficos.
+- **Feedback Tátil**: A visualização reage ao movimento do mouse, simulando dinâmica de fluidos.
+- **Maestro IA**: Um agente autônomo monitora pontuações de sinergia e narra o processo de otimização.
 
-![Optimization Process](assets/images/optimization_process.gif)
-*Evolução dinâmica da população de formulações ao longo de 60 gerações*
-
-</div>
+### 📚 Documentação Interativa
+Acesse o whitepaper completo, diagramas de arquitetura e referências de API diretamente através do dashboard web em `/docs`.
 
 ---
 
@@ -87,176 +70,77 @@ Onde:
 
 O coração do SynPhytica é um modelo Transformer especializado que processa a "linguagem" das interações moleculares.
 
-- **Self-Attention**: Captura sinergias não-lineares entre compostos (ex: terpenos modulando canabinoides).
-- **Cross-Attention**: Integra o perfil genético/clínico do paciente para personalizar a predição.
-- **Dual Heads**: Estima simultaneamente a probabilidade de eficácia e o risco de efeitos adversos.
-
 <div align="center">
-
-![Neural Architecture](assets/images/neural_architecture_diagram.png)
-*Diagrama esquemático do mecanismo de Atenção Dupla (Dual Attention)*
-
+<img src="../../assets/images/neural_architecture_diagram.png" width="100%" alt="Neural Architecture Bio-Digital Diagram">
 </div>
 
 ---
 
-## 🚀 Instalação
+## 🪙 DeSci & Financiamento Anônimo
 
-### Requisitos
+SynPhytica opera como um protocolo de **Ciência Descentralizada (DeSci)**. Acreditamos na pesquisa aberta sem gargalos burocráticos.
 
-- Python 3.9+
-- PyTorch 2.0+
-- CUDA (opcional, para GPU)
+- **Sem KYC**: Apoie a pesquisa anonimamente via Cripto (BTC, ETH, SOL).
+- **Computação Direta**: Os fundos são alocados diretamente para clusters GPU para treinamento de modelos.
+- **Acesso**: Contribuidores recebem acesso antecipado a chaves de API.
 
-### Setup
+*Confira o módulo "Support R&D" na página de documentação da Interface Web.*
+
+---
+
+## 💻 Instalação e Uso
+
+### 1. Motor Principal (Python/Rust)
 
 ```bash
-# Clonar repositório
-git clone https://github.com/seu-usuario/SynPhytica.git
-cd SynPhytica
-
-# Criar ambiente virtual
+git clone https://github.com/SH1W4/synphytica-core.git
+cd synphytica-core
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# Instalar dependências
 pip install -r requirements.txt
 ```
 
----
+### 2. Interface Web (Next.js)
 
-## 💻 Uso Básico
-
-### Exemplo: Otimização de Formulação de Cannabis
-
-```python
-from synphytica import SynPhyticaOptimizer, CompoundLibrary, UserProfile
-
-# 1. Carregar biblioteca de compostos
-library = CompoundLibrary.from_csv('data/cannabis_compounds.csv')
-
-# 2. Definir perfil do paciente
-user = UserProfile(
-    therapeutic_goals=['pain_relief', 'anxiety_reduction'],
-    risk_sensitivities={'psychoactive': 0.8},
-    preferences={'flavor': 'citrus', 'form': 'oil'}
-)
-
-# 3. Executar otimização
-optimizer = SynPhyticaOptimizer(
-    library=library,
-    user_profile=user,
-    population_size=100,
-    generations=50
-)
-
-results = optimizer.optimize()
-
-# 4. Visualizar top soluções
-for solution in results.pareto_front[:5]:
-    print(solution.summary())
+```bash
+cd web
+npm install
+npm run dev
 ```
-
-### Output Esperado
-
-```
-╔══════════════════════════════════════════════╗
-║      SYNPHYTICA OPTIMIZATION ENGINE          ║
-║   AI for Synergistic Phytopharmacology      ║
-╚══════════════════════════════════════════════╝
-
-Solution 1: Efficacy-Focused
-├── Fitness: 0.9123
-├── Efficacy: 0.89 | Risk: 0.12 | Match: 0.88
-├── Compounds:
-│   ├── CBD: 14.2%
-│   ├── THC: 6.8%
-│   ├── Limonene: 1.2%
-│   └── β-Caryophyllene: 0.9%
-└── Explanation: "High CBD:THC ratio balances analgesia..."
-```
+Acesse o dashboard em `http://localhost:3000`.
 
 ---
 
-## 📁 Estrutura do Projeto
+## 🌍 Escalabilidade e Multidomínio
 
-```
-SynPhytica/
-├── synphytica/
-│   ├── __init__.py
-│   ├── core.py              # Modelo Transformer e otimizador
-│   ├── compounds.py         # Classes de dados
-│   ├── fitness.py           # Função de fitness
-│   └── utils.py             # Utilitários
-├── data/
-│   └── example_compounds.csv
-├── examples/
-│   └── cannabis_optimization.py
-├── docs/
-│   ├── SynPhytica_paper_PT.pdf
-│   ├── SynPhytica_paper_EN.pdf
-│   └── mathematical_formalization.tex
-├── tests/
-│   └── test_core.py
-├── requirements.txt
-├── LICENSE
-└── README.md
-```
+Embora a **Cannabis Medicinal** seja nosso caso de validação primário, o SynPhytica Engine foi projetado para decodificar a complexidade de *qualquer* sistema botânico:
+
+1.  **🇧🇷 Biodiversidade Brasileira** (Copaíba, Andiroba, Açaí)
+2.  **🇨🇳 Medicina Tradicional Chinesa** (Panax ginseng)
+3.  **🇮🇳 Ayurveda** (Ashwagandha)
 
 ---
 
-## 📊 Casos de Uso
+## 📜 Citação
 
-### 1. Cannabis Medicinal
-- 52 compostos (9 canabinoides + 43 terpenos)
-- 18 indicações terapêuticas
-- Validação com literatura científica
+Se você usar o SynPhytica em sua pesquisa, por favor cite:
 
-### 2. Medicina Tradicional Chinesa (TCM)
-- Bibliotecas de ervas e fórmulas clássicas
-- Otimização de blends personalizados
-
-### 3. Nutracêuticos
-- Suplementos e vitaminas
-- Personalização baseada em genética
+```bibtex
+@software{symbeon2025synphytica,
+  author = {Symbeon Labs},
+  title = {SynPhytica: AI-Powered Framework for Personalized Phytotherapeutic Formulation Optimization},
+  year = {2025},
+  publisher = {GitHub},
+  url = {https://github.com/SH1W4/synphytica-core}
+}
+```
 
 ---
-
-## 🔬 Validação Científica
-
-### Performance de Otimização
-
-O gráfico abaixo demonstra a superioridade do algoritmo híbrido do SynPhytica (Fronteira de Pareto) comparado a métodos tradicionais. Note como o SynPhytica encontra soluções com maior eficácia para o mesmo nível de risco.
 
 <div align="center">
 
-![Pareto Frontier](assets/images/pareto_front.png)
-*Comparativo: SynPhytica (Verde/Dourado) vs. Random Search (Azul)*
+**© 2025 Symbeon Labs** • Divisão de Pesquisa & Desenvolvimento
 
-</div>
-
-### Explainable AI: Decodificando o "Entourage Effect"
-
-Diferente de modelos "caixa-preta", o mecanismo de atenção do SynPhytica permite visualizar exatamente quais interações moleculares o modelo está priorizando. O mapa de calor abaixo mostra a **Matriz de Self-Attention**, onde pontos quentes indicam forte sinergia detectada (ex: THC modulado por Limoneno).
-
-<div align="center">
-
-![Synergy Heatmap](assets/images/synergy_heatmap.png)
-*Matriz de Atenção Neural revelando clusters de sinergia molecular*
-
-</div>
-
-### Métricas de Performance
-
-- **Hipervolume**: Cobertura do espaço Pareto superior em 25%
-- **Satisfação de Restrições**: 100% de soluções viáveis
-- **Explicabilidade**: Visualizações de contribuição por composto
-
-### Publicações
-
-- 📄 **Formalização Matemática**: `docs/SynPhytica_paper_PT.pdf`
-- 📄 **Technical Specification**: `docs/SynPhytica_paper_EN.pdf`
-
-[![GitHub](https://img.shields.io/badge/GitHub-SynPhytica-black?logo=github)](https://github.com/seu-usuario/SynPhytica)
+📧 [Fale Conosco](mailto:contact@symbeonlabs.com)
 
 </div>
