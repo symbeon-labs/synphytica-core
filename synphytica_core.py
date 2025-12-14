@@ -826,6 +826,42 @@ class SynPhyticaOptimizer:
         
         return np.array(fitnesses), details_list
     
+    def update_pareto_front(self, population: np.ndarray, fitnesses: np.ndarray, details_list: List[Dict]):
+        """
+        Update Pareto front with non-dominated solutions.
+        """
+        from dataclasses import dataclass
+        
+        @dataclass
+        class FormulationResult:
+            doses: np.ndarray
+            fitness: float
+            details: Dict
+            
+            def summary(self, library, top_n=10):
+                active_idx = np.where(self.doses > 0.1)[0]
+                compounds_str = "\n".join([
+                    f"  - {library.compounds[i].name}: {self.doses[i]:.2f}mg"
+                    for i in active_idx[:top_n]
+                ])
+                return f"Fitness: {self.fitness:.4f}\nCompounds:\n{compounds_str}"
+        
+        # Simple Pareto front: keep top N solutions
+        top_n = min(20, len(population))
+        top_indices = np.argsort(fitnesses)[-top_n:]
+        
+        self.pareto_front = [
+            FormulationResult(
+                doses=population[i].copy(),
+                fitness=fitnesses[i],
+                details=details_list[i]
+            )
+            for i in top_indices
+        ]
+        
+        # Sort by fitness descending
+        self.pareto_front.sort(key=lambda x: x.fitness, reverse=True)
+    
     def tournament_selection(self, population: np.ndarray, fitnesses: np.ndarray, k: int = 3) -> np.ndarray:
         """
         Tournament selection.
@@ -901,6 +937,11 @@ class SynPhyticaOptimizer:
                 global_best = individuals[best_idx].copy()
                 global_best_idx = best_idx
         
+        return individuals
+    
+    def optimize(self) -> List['FormulationResult']:
+        """
+        Run hybrid optimization (NSGA-II + PSO).
         
         Returns:
             List of FormulationResult objects (Pareto front)

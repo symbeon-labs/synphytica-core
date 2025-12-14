@@ -1,4 +1,4 @@
-import CryptoFunding from "@/components/CryptoFunding";
+import { CryptoFunding } from "@/components/CryptoFunding";
 
 export default function Documentation() {
     return (

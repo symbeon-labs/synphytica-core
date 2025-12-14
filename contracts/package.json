@@ -1,0 +1,20 @@
+{
+    "name": "@synphytica/contracts",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "hardhat compile",
+        "test": "hardhat test",
+        "deploy:sepolia": "hardhat run scripts/deploy.ts --network sepolia"
+    },
+    "devDependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+        "@openzeppelin/contracts": "^5.0.0",
+        "hardhat": "^2.19.0",
+        "ts-node": "^10.9.0",
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "dotenv": "^17.2.3"
+    }
+}

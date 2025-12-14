@@ -1,7 +1,7 @@
 import OptimizationVisualizer from '@/components/OptimizationVisualizer';
 import { BeakerIcon, ArrowUpTrayIcon, ServerIcon } from '@heroicons/react/24/outline'; // Exemplo, usaremos SVG direto se icons falharem
 
-import CryptoFunding from "@/components/CryptoFunding";
+import { CryptoFunding } from "@/components/CryptoFunding";
 
 export default function Home() {
   return (

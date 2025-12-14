@@ -98,6 +98,25 @@ While **Medicinal Cannabis** is our primary validation case, the SynPhytica Engi
 
 ---
 
+---
+
+## 🔬 Collaborative DeSci Ecosystem
+
+SynPhytica is not just a tool; it is a **Decentralized Science Protocol**. We combine financial sovereignty with collaborative intelligence.
+
+### 1. Funding: GhostFund Protocol
+Integrated directly into the dashboard, the [GhostFund Protocol](./web/src/components/CryptoFunding.tsx) allows labs to receive direct crypto donations without intermediaries.
+- **Benefit:** 100% of funds go to research.
+- **Proof:** Donors receive "Patron Badges" (NFTs).
+
+### 2. Knowledge: The Scholar Program
+Researchers can contribute verified botanical data to our Vector Database and earn computational credits.
+- **Action:** Submit species using the [Standard Template](templates/research/SPECIES_CONTRIBUTION_TEMPLATE.md).
+- **Reward:** Mint **"Contributor SBTs"** (Soulbound Tokens) that unlock premium Neural Core features.
+- **Learn More:** [Read the Scientific Contribution Guide](docs/SCIENTIFIC_CONTRIBUTION.md).
+
+---
+
 ## 🐳 Docker (Recommended for Devs)
 
 Run the entire environment with a single command:

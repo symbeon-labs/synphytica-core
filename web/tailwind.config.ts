@@ -23,6 +23,15 @@ const config: Config = {
                 sans: ['var(--font-inter)', 'sans-serif'],
                 mono: ['var(--font-jetbrains)', 'monospace'],
             },
+            keyframes: {
+                shimmer: {
+                    '0%': { transform: 'translateX(-100%) translateY(-100%) rotate(45deg)' },
+                    '100%': { transform: 'translateX(100%) translateY(100%) rotate(45deg)' },
+                },
+            },
+            animation: {
+                shimmer: 'shimmer 3s infinite',
+            },
         },
     },
     plugins: [],
