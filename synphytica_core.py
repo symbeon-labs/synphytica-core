@@ -29,9 +29,23 @@ The optimization uses a hybrid approach combining:
     - PSO (Particle Swarm Optimization)
     - Transformer-based neural surrogate model with dual attention
 """
+import asyncio
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+# SEVE Framework Integration
+try:
+    from seve_integration import (
+        FormulationValidator,
+        EthicsLevel,
+        ValidationStatus,
+        validate_formulation_with_seve
+    )
+    SEVE_AVAILABLE = True
+except ImportError:
+    SEVE_AVAILABLE = False
+    print("⚠️  SEVE Framework not available. Ethical validation disabled.")
 
 warnings.filterwarnings('ignore')
 
@@ -347,6 +361,8 @@ class FormulationResult:
     risk_variance: np.ndarray
     constraint_violations: List[str] = field(default_factory=list)
     explanation: str = ""
+    details: Dict = field(default_factory=dict)
+    validation: Any = None
     
     def summary(self, library: CompoundLibrary, top_n: int = 10) -> str:
         """
@@ -830,22 +846,6 @@ class SynPhyticaOptimizer:
         """
         Update Pareto front with non-dominated solutions.
         """
-        from dataclasses import dataclass
-        
-        @dataclass
-        class FormulationResult:
-            doses: np.ndarray
-            fitness: float
-            details: Dict
-            
-            def summary(self, library, top_n=10):
-                active_idx = np.where(self.doses > 0.1)[0]
-                compounds_str = "\n".join([
-                    f"  - {library.compounds[i].name}: {self.doses[i]:.2f}mg"
-                    for i in active_idx[:top_n]
-                ])
-                return f"Fitness: {self.fitness:.4f}\nCompounds:\n{compounds_str}"
-        
         # Simple Pareto front: keep top N solutions
         top_n = min(20, len(population))
         top_indices = np.argsort(fitnesses)[-top_n:]
@@ -854,6 +854,10 @@ class SynPhyticaOptimizer:
             FormulationResult(
                 doses=population[i].copy(),
                 fitness=fitnesses[i],
+                efficacy_scores=details_list[i]['efficacy_scores'],
+                risk_scores=details_list[i]['risk_scores'],
+                efficacy_variance=details_list[i]['efficacy_var'],
+                risk_variance=details_list[i]['risk_var'],
                 details=details_list[i]
             )
             for i in top_indices
@@ -1004,6 +1008,59 @@ class SynPhyticaOptimizer:
         print("\n" + "="*60)
         print("  OPTIMIZATION COMPLETE")
         print("="*60 + "\n")
+        
+        # Validation with SEVE Framework
+        if SEVE_AVAILABLE:
+            print("🛡️  Validating formulations with SEVE Ethical Framework...")
+            
+            async def run_validations():
+                results = []
+                for result in self.pareto_front:
+                    # Prepare data for SEVE
+                    formulation_data = {
+                        'doses': result.doses,
+                        'details': result.details,
+                        'compound_names': [c.name for c in self.library.compounds],
+                        'fitness': result.fitness
+                    }
+                    
+                    user_profile_data = {
+                        'therapeutic_goals': self.user.therapeutic_goals,
+                        'constraints': {'allergies': []}  # Placeholder
+                    }
+                    
+                    if hasattr(self.user, 'demographic'):
+                         user_profile_data['demographic'] = self.user.demographic
+                    
+                    # Validate
+                    validation = await validate_formulation_with_seve(
+                        formulation_data,
+                        user_profile_data,
+                        ethics_level=EthicsLevel.STRICT
+                    )
+                    
+                    # Tag result
+                    result.validation = validation
+                    results.append(result)
+                return results
+            
+            # Run async validation
+            try:
+                self.pareto_front = asyncio.run(run_validations())
+                
+                # Filter out BLOCKED formulations
+                approved = [r for r in self.pareto_front if r.validation.status != ValidationStatus.BLOCKED]
+                blocked = len(self.pareto_front) - len(approved)
+                
+                if blocked > 0:
+                    print(f"⚠️  SEVE GuardFlow blocked {blocked} formulation(s) due to ethical/safety violations.")
+                else:
+                    print("✅  All formulations validated successfully.")
+                    
+                self.pareto_front = approved
+                
+            except Exception as e:
+                print(f"❌ SEVE Validation Error: {e}")
         
         return self.pareto_front
 
