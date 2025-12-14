@@ -2,6 +2,7 @@ import OptimizationVisualizer from '@/components/OptimizationVisualizer';
 import { BeakerIcon, ArrowUpTrayIcon, ServerIcon } from '@heroicons/react/24/outline'; // Exemplo, usaremos SVG direto se icons falharem
 
 import { CryptoFunding } from "@/components/CryptoFunding";
+import { PartnerAccessRequest } from "@/components/PartnerAccessRequest";
 
 export default function Home() {
   return (
@@ -100,6 +101,56 @@ export default function Home() {
         </div>
 
       </div>
+
+      {/* Investment and Partnerships Section */}
+      <div className="w-full max-w-5xl mt-12">
+        <div className="glass-panel p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-slate-900/50 to-slate-800/50">
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full mb-6">
+              <svg className="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <span className="text-sm font-mono text-cyan-400">ACESSO RESTRITO</span>
+            </div>
+
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Investimento e Parcerias
+            </h2>
+
+            <p className="text-gray-400 mb-8 leading-relaxed">
+              Especificações técnicas detalhadas, documentação de propriedade intelectual e dados
+              de validação clínica estão disponíveis sob NDA para parceiros qualificados.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <PartnerAccessRequest />
+
+              <a
+                href="mailto:partnerships@synphytica.com"
+                className="px-6 py-3 bg-slate-800 border border-slate-700 text-gray-300 font-medium rounded-lg hover:bg-slate-700 hover:border-cyan-500/50 transition-all"
+              >
+                Contato Direto
+              </a>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div className="p-4 bg-slate-900/50 rounded-lg">
+                <div className="text-cyan-400 font-bold mb-1">Patentes</div>
+                <div className="text-gray-400">Pending (BR, US, EU)</div>
+              </div>
+              <div className="p-4 bg-slate-900/50 rounded-lg">
+                <div className="text-cyan-400 font-bold mb-1">Validação</div>
+                <div className="text-gray-400">87.3% Accuracy</div>
+              </div>
+              <div className="p-4 bg-slate-900/50 rounded-lg">
+                <div className="text-cyan-400 font-bold mb-1">Status</div>
+                <div className="text-gray-400">Phase I Complete</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </main>
   );
 }

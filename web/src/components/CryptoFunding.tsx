@@ -215,6 +215,7 @@ export const CryptoFunding = ({
                                             </div>
                                         )}
                                     </div>
+                                ) : (
                                     // CLAIM MODE
                                     <div className="space-y-4">
                                         <div className="text-center pb-4">
@@ -222,19 +223,19 @@ export const CryptoFunding = ({
                                             <div className="relative w-32 h-32 mx-auto mb-4">
                                                 {/* Glow Effect */}
                                                 <div className="absolute inset-0 bg-gradient-to-br from-[#00FFCC] via-purple-500 to-gold-400 rounded-2xl blur-xl opacity-40 animate-pulse"></div>
-                                                
+
                                                 {/* Badge Container */}
                                                 <div className="relative w-full h-full bg-gradient-to-br from-[#00FFCC]/20 via-purple-500/20 to-gold-400/20 rounded-2xl border-2 border-[#00FFCC]/30 flex items-center justify-center overflow-hidden shadow-[0_0_40px_rgba(0,255,204,0.3)]">
                                                     {/* Animated Gradient Overlay */}
                                                     <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent animate-[shimmer_3s_infinite]"></div>
-                                                    
+
                                                     {/* Icon/Symbol */}
                                                     <div className="relative z-10">
                                                         <svg className="w-16 h-16 text-[#00FFCC]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                                                         </svg>
                                                     </div>
-                                                    
+
                                                     {/* Corner Accents */}
                                                     <div className="absolute top-1 left-1 w-3 h-3 border-t-2 border-l-2 border-[#00FFCC]/50"></div>
                                                     <div className="absolute top-1 right-1 w-3 h-3 border-t-2 border-r-2 border-purple-400/50"></div>
@@ -242,7 +243,7 @@ export const CryptoFunding = ({
                                                     <div className="absolute bottom-1 right-1 w-3 h-3 border-b-2 border-r-2 border-gold-400/50"></div>
                                                 </div>
                                             </div>
-                                            
+
                                             <h4 className="text-white font-bold">{nft!.collectionName}</h4>
                                             <p className="text-xs text-gray-400 mt-1 font-mono">Mint Fee: {nft!.mintFee} (Goes to Protocol dev)</p>
                                         </div>
