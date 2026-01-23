@@ -1,0 +1,21 @@
+C:\Users\JoÒo\Desktop\PROJETOS\04_DEVELOPER_TOOLS\SynPhytica\.venv\Lib\site-packages\pydantic\_internal\_fields.py:149: UserWarning: Field "model_version" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+C:\Users\JoÒo\Desktop\PROJETOS\04_DEVELOPER_TOOLS\SynPhytica\.venv\Lib\site-packages\pydantic\_internal\_fields.py:149: UserWarning: Field "model_loaded" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+Traceback (most recent call last):
+Testing imports...
+Import failed: name 'Union' is not defined
+  File "C:\Users\JoÒo\Desktop\PROJETOS\04_DEVELOPER_TOOLS\SynPhytica\test_api_minimal.py", line 10, in <module>
+    from api.services.optimization_service import OptimizationService
+  File "C:\Users\JoÒo\Desktop\PROJETOS\04_DEVELOPER_TOOLS\SynPhytica\api\services\optimization_service.py", line 15, in <module>
+    from synphytica_core import (
+  File "C:\Users\JoÒo\Desktop\PROJETOS\04_DEVELOPER_TOOLS\SynPhytica\synphytica_core.py", line 136, in <module>
+    class UserProfile:
+  File "C:\Users\JoÒo\Desktop\PROJETOS\04_DEVELOPER_TOOLS\SynPhytica\synphytica_core.py", line 149, in UserProfile
+    preferences: Dict[str, Union[str, float]] = field(default_factory=dict)
+                           ^^^^^
+NameError: name 'Union' is not defined

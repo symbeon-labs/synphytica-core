@@ -1,0 +1,13 @@
+Testing imports...
+Traceback (most recent call last):
+Import failed: name 'Tuple' is not defined
+  File "C:\Users\JoÒo\Desktop\PROJETOS\04_DEVELOPER_TOOLS\SynPhytica\test_api_minimal.py", line 10, in <module>
+    from api.services.optimization_service import OptimizationService
+  File "C:\Users\JoÒo\Desktop\PROJETOS\04_DEVELOPER_TOOLS\SynPhytica\api\services\optimization_service.py", line 15, in <module>
+    from synphytica_core import (
+  File "C:\Users\JoÒo\Desktop\PROJETOS\04_DEVELOPER_TOOLS\SynPhytica\synphytica_core.py", line 631, in <module>
+    class FitnessEvaluator:
+  File "C:\Users\JoÒo\Desktop\PROJETOS\04_DEVELOPER_TOOLS\SynPhytica\synphytica_core.py", line 661, in FitnessEvaluator
+    def evaluate(self, doses: np.ndarray, user: UserProfile) -> Tuple[float, Dict]:
+                                                                ^^^^^
+NameError: name 'Tuple' is not defined

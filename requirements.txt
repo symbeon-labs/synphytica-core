@@ -9,6 +9,13 @@ scipy>=1.10.0
 deap>=1.4.0
 pymoo>=0.6.0
 
+# API (FastAPI)
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.0
+python-multipart==0.0.6
+slowapi==0.1.9
+
 # Visualization
 matplotlib>=3.7.0
 seaborn>=0.12.0

@@ -6,6 +6,8 @@
 [![English](https://img.shields.io/badge/🇬🇧_English-Documentation-blue?style=for-the-badge)](docs/en/README.md)
 [![Português](https://img.shields.io/badge/🇧🇷_Português-Documentação-green?style=for-the-badge)](docs/pt/README.md)
 [![Web Interface](https://img.shields.io/badge/🚀_Web_App-v0.2.0-cyan?style=for-the-badge)](web/)
+[![Built with Trinity OS](https://img.shields.io/badge/Built_with-Trinity_OS-blueviolet?style=for-the-badge&logo=dna)](https://github.com/th3m1s-core)
+[![Funded via GhostFund](https://img.shields.io/badge/Funded_via-GhostFund_Protocol-00C853?style=for-the-badge&logo=ethereum)](https://github.com/ghostfund-protocol)
 
 ---
 
