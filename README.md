@@ -25,7 +25,7 @@
 
 ## 📋 Overview
 
-**SynPhytica** is a computational framework that bridges the gap between ancient botanical wisdom and modern artificial intelligence. By treating molecular interactions as a language, it decodes the "Entourage Effect" to design personalized formulations that maximize therapeutic efficacy while minimizing risks.
+**SynPhytica** is an experimental computational research framework exploring AI-assisted analysis and optimization of complex botanical formulations. By treating molecular interactions as a language, it decodes the "Entourage Effect" to investigate computational representations of botanical mixtures and multi-objective optimization. Experimental outputs should not be interpreted as clinical recommendations or proof of therapeutic efficacy.
 
 Unlike traditional drug discovery that focuses on single-molecule targets, SynPhytica embraces **Polypharmacology**—optimizing complex mixtures of compounds (Cannabinoids, Terpenes, Flavonoids) for multi-target synergy.
 
@@ -89,9 +89,9 @@ The heart of SynPhytica is a **Dual-Attention Transformer**. It processes the ch
 
 ---
 
-## 🌍 Scalability & Multi-Domain
+## 🌍 Research scope
 
-While **Medicinal Cannabis** is our primary validation case, the SynPhytica Engine is designed to decode the complexity of *any* botanical system.
+Medicinal Cannabis is the primary research case documented in this repository. Extensions to other botanical domains remain research directions rather than validated capabilities.
 
 ### 🚀 Target Domains
 1.  **🇧🇷 Brazilian Biodiversity (Amazon/Cerrado)**: Copaíba, Andiroba, Açaí.
